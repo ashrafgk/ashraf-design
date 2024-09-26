@@ -1,0 +1,233 @@
+
+<div class="homepage-header">
+	<div class="homepage-header--container">
+		<img class="header-image" src="/src/assets/ak-design-1.svg" id="progress">
+		<div class="header-image-blinde"></div>
+		<div class="header-container">
+			<img class="header-image" src="/src/assets/ak-header.svg" id="progress">
+		</div>
+		
+		<script type="text/javascript">
+			const UPDATE = ({ x, y }) => {
+			  gsap.set(document.documentElement, {
+				'--x': gsap.utils.mapRange(0, window.innerWidth, -1, 1, x),
+				'--y': gsap.utils.mapRange(0, window.innerHeight, -1, 1, y),
+			  })
+			}
+	
+			window.addEventListener('pointermove', UPDATE)
+	
+	
+			// Want to handle device orientation too
+	
+			const handleOrientation = ({ beta, gamma }) => {
+			  const isLandscape = window.matchMedia('(orientation: landscape)').matches
+			  gsap.set(document.documentElement, {
+				'--x': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(-45, 45, -1, 1, beta) : gsap.utils.mapRange(-45, 45, -1, 1, gamma)),
+				'--y': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(20, 70, 1, -1, Math.abs(gamma)) : gsap.utils.mapRange(20, 70, 1, -1, beta)),
+			  })
+			}
+	
+			const START = () => {
+			  // if (BUTTON) BUTTON.remove();
+			  if (
+				DeviceOrientationEvent?.requestPermission
+			  ) {
+				Promise.all([
+				  DeviceOrientationEvent.requestPermission(),
+				]).then((results) => {
+				  if (results.every((result) => result === "granted")) {
+					window.addEventListener("deviceorientation", handleOrientation);
+				  }
+				});
+			  } else {
+				window.addEventListener("deviceorientation", handleOrientation);
+			  }
+			};
+			document.body.addEventListener('click', START, { once: true })
+	
+		</script>
+		
+	</div>
+</div>
+<style>
+
+
+    :root {
+        --x: 0;
+        --y: 0;
+    }
+
+	/* homepage-header */
+	.homepage-header {
+		position: relative;
+		z-index: 1;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-block-end: 15rem
+	}
+
+	.homepage-header--container {
+		width: 650px;
+		margin: auto;
+		position: fixed;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.homepage-header img {
+		object-position: calc(-50% + (var(--x) * 12px)) calc(43% + (var(--y) * -12px));
+	}
+
+	.homepage-header .header-container {
+		translate: calc((var(--x) * -15px)) calc(var(--y) * 15px);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		@supports (animation-timeline: scroll()) {
+			#progress {
+				transform-origin: 50% 50%;
+				animation: grow-progress forwards ease-in-out;
+				animation-timeline: scroll(block nearest);
+				animation-range: exit-crossing 0% exit-crossing 20%;
+			}
+			/* .subheader-appear {
+				transform-origin: 50% 50%;
+				animation: subheader-animation linear;
+				animation-timeline: scroll(block nearest);
+				animation-range: exit-crossing 0% exit-crossing 25%;
+			} */
+			.header-container {
+				transform-origin: 50% 50%;
+				animation: blur-progress forwards ease-in-out;
+				animation-timeline: scroll(block nearest);
+				animation-range: exit-crossing 0% exit-crossing 50%;
+			}
+		}
+	}
+
+	
+
+	@keyframes grow-progress {
+		0% {
+			transform: perspective(1500px) translateZ(00px);
+			opacity: 1;
+			visibility: visible;
+		}
+		100% {
+			transform: perspective(1500px) translateZ(-100px);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	
+
+	.header-image {
+		margin: auto;
+		grid-area: cover;
+	}
+
+	@keyframes header-image-blinde-animation {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+
+	.header-image-blinde {
+		display: block;
+		position: absolute;
+		background-color: #1a1a1a;
+		margin: auto;
+		height: 100%;
+		width: 100%;
+		animation: header-image-blinde-animation linear forwards;
+		animation-duration: 5s;
+		z-index: 1;
+	}
+
+	@keyframes header-animation {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	.header {
+		
+		margin: auto;
+		z-index: 10;
+		color: #FF5558;
+		font-size: 4rem;
+		font-weight: bold;
+		align-self: center;
+		text-shadow: 0px 5px 55px rgba(0, 0, 0, 0.5);
+		
+		/* opacity: 0;
+		animation: header-animation linear forwards;
+		animation-duration: 3s;
+		animation-delay: 2s; */
+	}
+
+	.header-container {
+		position: relative;
+		top: -40px;
+		margin: auto;
+		z-index: 10;
+		align-self: center;
+		grid-area: cover;
+	}
+
+	@keyframes blur-progress {
+		0% {
+			filter: blur(0px);
+			visibility: visible;
+		}
+		100% {
+			filter: blur(30px);
+			visibility: hidden;
+		}
+	}
+
+	@keyframes subheader-animation {
+		0% {
+			transform: translateY(0px);
+			opacity: 0;
+		}
+
+		80% {
+			transform: translateY(-15px);
+			opacity: 1;
+		}
+		100% {
+			transform: translateY(-15px);
+			opacity: 1;
+		}
+	}
+
+	.subheader {
+		color: white;
+		font-size: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+		align-self: center;
+		grid-area: cover;
+	}
+
+	.subheader-appear {
+		position: relative;
+		/* top: 20px; */
+		margin: auto;
+		transform-origin: 50% 50%;
+	}
+</style>

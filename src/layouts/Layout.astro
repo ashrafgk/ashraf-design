@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
 	title: string;
 }
@@ -13,38 +15,408 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/src/stylesheets/reset.css">
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions/>
 		<title>{title}</title>
 	</head>
 	<body>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
+		
 		<slot />
 	</body>
 </html>
 <style is:global>
+	@view-transition {
+  		navigation: auto;
+	}
+	@keyframes slide-in-from-left {
+	from {
+		translate: -100vw 0;
+	}
+}
+@keyframes slide-in-from-right {
+	from {
+		translate: 100vw 0;
+	}
+}
+@keyframes slide-out-to-left {
+	to {
+		translate: -100vw 0;
+	}
+}
+@keyframes slide-out-to-right {
+	to {
+		translate: 100vw 0;
+	}
+}
+@keyframes scale-up {
+	from {
+		scale: 0;
+	}
+}
+@keyframes scale-down {
+	to {
+		scale: 0;
+	}
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}
+	html:active-view-transition-type(forwards, backwards) {
+		.explorer-video {
+			view-transition-name: media-player;
+		}
+	}
+
+	/* Animation styles for forwards type only */
+	html:active-view-transition-type(forwards) {
+		&::view-transition-old(content) {
+			animation-name: slide-out-to-left;
+		}
+		&::view-transition-new(content) {
+			animation-name: slide-in-from-right;
+		}
+	}
+
+	/* Animation styles for backwards type only */
+	html:active-view-transition-type(backwards) {
+		&::view-transition-old(content) {
+			animation-name: slide-out-to-right;
+		}
+		&::view-transition-new(content) {
+			animation-name: slide-in-from-left;
+		}
+	}
+
+	/* Animation styles for reload type only */
+	html:active-view-transition-type(reload) {
+		&::view-transition-old(root) {
+			animation-name: fade-out, scale-down;
+		}
+		&::view-transition-new(root) {
+			animation-delay: 0.25s;
+			animation-name: fade-in, scale-up;
+		}
+	}
+	@keyframes dropping {
+		0% {
+			filter: blur(3px);
+			visibility: hidden;
+		}
+		100% {
+			filter: blur(0px);
+			visibility: visible;
+		}
+	}
+	.reveal {
+		animation: dropping forwards ease-in-out;
+		animation-timeline: scroll(block nearest);
+		animation-range: entry exit-crossing 50%;
+	}
+	@keyframes darken {
+		from {
+			background: #888;
+		}
+		to {
+			background: red;
+		}
+	}
+
+	@keyframes shadow {
+		to {
+			border-bottom: 2px solid #555;
+		}
+	}
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--bg: #0D0B22;
+		--bg-2: #150E2A;
+		--bg-3: #221745;
+		--bg--blue: #232a3a;
+		--text--offwhite: #EDECF9;
+		--text--headers: #6B47EB;
+		--main-cta: #6B47EB;
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: "Inter", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+		color: white;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+	@view-transition {
+		navigation: auto;
 	}
+
+	.text-bold {
+		font-weight: bold;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.gap-south-sm {
+		margin-bottom: 1.5rem;
+	}
+
+	.gap-south-md {
+		margin-bottom: 2.5rem;
+	}
+
+	.gap-south-lg {
+		margin-bottom: 4rem;
+	}
+
+	.gap-south-xl {
+		margin-bottom: 8rem;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		margin: auto;
+	}
+
+	ul li {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	ul li:last-child {
+		margin-bottom: 0;
+	}
+
+	
+
+	#case-study {
+		padding: 2rem 0;
+		
+		h1 {
+			font-size: 64px;
+			font-weight: bold;
+			line-height: 125%;
+			color: #fff;
+		}
+
+		h2 {
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 125%;
+			color: #fff;
+		}
+
+		h3 {
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 125%;
+			color: #fff;
+		}
+
+		h4 {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 125%;
+			color: #fff;
+		}
+
+
+		p {
+			font-size: 20px;
+			line-height: 150%;
+		}
+
+		ul {
+			list-style: disc;
+			margin-left: 1rem;
+			li {
+				font-size: 20px;
+				margin-bottom: 1rem;
+				line-height: 150%;
+				color: #ccc;
+			}
+
+		}
+
+		p:has(+ p) {
+			margin-bottom: 1rem;
+		}
+
+		.table {
+			p {
+				font-size: 14px;
+			}
+		}
+		--bg: hsl(0 0% 10%);
+		--header-height: 80px;
+		
+		
+		@supports (animation-timeline: scroll()) {
+			.table-header {
+				
+			}
+		}
+		
+		span.number {
+			position: absolute;
+			z-index: 0;
+			font-size: 6rem;
+			left: -24px;
+			top: -50px;
+			background: -webkit-linear-gradient(#555 0%, transparent 80%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			display: flex;
+			font-weight: bold;
+			width: 60px;
+			height: 130px;
+			align-items: center;
+		}
+	}
+
+	.case-study--header {
+		padding: 6rem 0;
+	}
+
+	.case-study--body {
+		display: grid;
+		gap: 3rem;
+		margin: auto;
+		color: #ccc;
+		img {
+			margin: 0rem auto 1rem;
+			border-radius: 2rem;
+			overflow: hidden;
+		}
+	}
+
+	.case-study--background {
+		display: grid;
+		width: 800px;
+		margin: auto;
+		grid-template-columns: 200px auto;
+		gap: 60px;
+
+		.case-study--background-info {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 60px;
+		}
+
+		.case-study--background-info-container {
+			display: grid;
+			gap: 60px;
+		}
+	}
+
+	.case-study--full-container {
+		width: 100%;
+		margin: auto;
+		figure, image { width: 90vw; max-width: 100%; text-align: center; margin: auto}
+	}
+
+	.case-study--large-container {
+		width: 1200px;
+		margin: auto;
+	}
+
+	.case-study--text-container {
+		width: 800px;
+		margin: auto;
+	}
+
+	figure {
+		img:has(+ figcaption) {
+			margin-bottom: 0.5rem;
+		}
+
+		figcaption {
+			text-align: center;
+			font-size: 14px;
+			color: #ccc;
+		}
+	}
+
+	.video-container {
+		padding: 3rem;
+    	background: #cbcbcb;
+		border-radius: 2rem;
+		overflow: hidden;
+		margin-bottom: 1rem;
+		video {
+			box-shadow: 0px 128px 64px 0px rgba(0, 0, 0, 0.16), 0px 16px 16px 0px rgba(0, 0, 0, 0.16), 0px 96px 96px 0px rgba(0, 0, 0, 0.16), 0px 36px 36px 0px rgba(0, 0, 0, 0.16);
+		}
+	}
+
+	.table {
+		display: grid;
+		width: 800px; 
+		margin: 2rem 0;
+		
+	}
+
+	.table-row{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 1rem;
+		width: 100%;
+		border-bottom: 1px solid #555;
+		padding: 1.5rem 0 1rem;
+	}
+	.table-header {
+		position: sticky;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 1rem;
+		padding: 1.5rem 0 0rem;
+		top: 0;
+		background: #1a1a1a;
+		border-bottom: 2px solid #555;
+		
+	}
+
+	@keyframes bump {
+    0% {
+      opacity: 0;
+      transform: scale(1) translateY(-200px);
+    }
+   
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
 </style>
