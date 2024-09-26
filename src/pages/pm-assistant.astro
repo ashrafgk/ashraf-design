@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+import { Image } from 'astro:assets';
+import QuestionAnswer from '../assets/work-pm-assistant--question-answer.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio | Dimension 2.0">
@@ -99,7 +102,7 @@ import Footer from '../components/Footer.astro';
 
 			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-					<img src="src/assets/work-pm-assistant--contextual-questions.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;">
+                    <Image src={QuestionAnswer} alt="descriptive text" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" />
                 </figure>
             </div>
 
