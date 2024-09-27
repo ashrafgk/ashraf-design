@@ -25,7 +25,7 @@ const anim = {
 
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ashraf Khattab Portfolio">
 	<main>
 		<div style="position:relative; overflow-x: clip">
 			<PageHeader />
@@ -111,7 +111,7 @@ const anim = {
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center;">
 					<div style="max-width: 1200px; margin: auto; padding: 0 2rem;">
 						<h2 style="font-size: 48px; font-weight: bold; margin-block-end: 1em;">Other work</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+						<div class="other-work-grid">
 							<div class="work-cover-container">
 								<a href="/global-search"> 
 									<figure class="work-cover" style="border-radius: 1rem;" >
@@ -267,6 +267,8 @@ const anim = {
 		width: 100%;
 		max-width: 100%;
 	}
+
+	.other-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 	@media only screen and (max-width: 1680px) {
 		#pattern-move-1 { display: none;}
 		#pattern-move-2 { display: none;}
@@ -281,6 +283,8 @@ const anim = {
 		.works-tag {
 			display: none;
 		}
+
+		.other-work-grid { display: grid; grid-template-columns: 100%; gap: 1rem; }
 	}
 
 </style>
