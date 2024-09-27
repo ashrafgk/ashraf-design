@@ -7,25 +7,27 @@ import { Image } from 'astro:assets';
 import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png';
 ---
 
-<Layout title="Ashraf Khattab Portfolio | Dimension 2.0">
+<Layout title="Ashraf Khattab Portfolio">
 	
 	<main id="case-study">
 		<Nav />
 		<div style="position:relative; ">
-        <section class="case-study--header">
-            <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-                <h1 style="margin-bottom: 2rem;" class="header-appear">PowerMetrics Assistant</h1>
-                <p class="subheader-appear">A contextual AI agent to help you through your PowerMetrics experience powered by our in-depth support documentations</p>
-            </div>
-			<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero2">
-                <figure class="content video-container" style=" background-color: #FFEE9B">
-                    <video class="pm-ai-video" muted autoplay loop style="width: 1200px; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
-                        <source src="../img/work-pm-ai--video.mp4">
-                    </video> 
-                </figure>
-            </div>
+			
            
-        </section>
+            <section class="case-study--header">
+				<div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                    <h1 style="margin-bottom: 2rem;" class="header-appear">PowerMetrics Assistant</h1>
+                    <p class="subheader-appear">A contextual AI agent to help you through your PowerMetrics experience powered by our in-depth support documentations</p>
+				</div>
+				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero2">
+					<figure class="content video-container">
+						<video class="explorer-video" muted autoplay loop style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
+							<source src="../img/work-pm-ai--video.mp4">
+						</video> 
+					</figure>
+				</div>
+			
+			</section>
         <section class="case-study--body" style="">
             <div class="case-study--background">
                 <h2>Project Info</h2>

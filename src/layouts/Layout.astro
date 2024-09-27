@@ -232,7 +232,7 @@ const { title } = Astro.props;
 		padding: 2rem 0;
 		
 		h1 {
-			font-size: 64px;
+			font-size: clamp(2.625rem, 1.6429rem + 3.1429vw, 4rem);
 			font-weight: bold;
 			line-height: 125%;
 			color: #fff;
@@ -394,7 +394,7 @@ const { title } = Astro.props;
 
 	.table {
 		display: grid;
-		width: 800px; 
+		max-width: 800px;
 		margin: 2rem 0;
 		
 	}
@@ -432,6 +432,17 @@ const { title } = Astro.props;
   }
 
   @media only screen and (max-width: 992px) {
+	#case-study {
+		padding: 2rem;
+	}
+	.case-study--header {
+		.case-study--full-container {
+			figure, image {
+				max-width: 100% ;
+				width: auto;
+			}
+		}
+	}
 		.case-study--background {
 			display: grid;
 			max-width: 800px;
