@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
-import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 
 const anim = {
@@ -33,14 +32,15 @@ const anim = {
 	
 			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 				<section style="width: 1800px; padding: 10rem 0; align-items: center;justify-content: center; display: flex; flex-direction: column; margin: auto; position: relative;">
-					<div style="position: absolute; top: 0px; left: 0" id="pattern-move-1"><img src="../img/pattern-top.svg"></div>
-					<div style="position: absolute; bottom: -500px; right: 0" id="pattern-move-2"><img src="../img/pattern-bottom.svg"></div>
-					<div style="width: 780px; margin: 0; margin-block-end: 3rem;" >
-						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">I have over a decade of experience in design, spanning graphic, web, and product design. Each area presents unique creative challenges.</p>
-						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left;">On any given day, I’m juggling a few different roles:</p>
+					<div style="position: absolute; top: 0px; left: 0" id="pattern-move-1" class="pattern-move-1"><img src="../img/pattern-top.svg"></div>
+					<div style="position: absolute; bottom: -500px; right: 0" id="pattern-move-2" class="pattern-move-2"><img src="../img/pattern-bottom.svg"></div>
+					<div style="max-width: 780px; margin: 0; margin-block-end: 3rem; padding: 0 2rem;" >
+						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">Hi, I am a designer who cares about creating beautiful experiences that people can find useful.</p>
+						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">With over a decade of experience in brand and product design, I’ve helped small companies unlock their potential.</p>
+						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left;">Currently, I’m at Klipfolio, where I juggle multiple roles every day:</p>
 					</div>
-					<div style="width: 780px; display: grid; grid-template-columns: 1fr; gap: 3rem; margin-block-end: 2rem;">
-						<div style="width: auto; text-align: left;" >
+					<div style="max-width: 780px; display: grid; grid-template-columns: 1fr; gap: 3rem; margin-block-end: 2rem; padding: 0 2rem;">
+						<div style="max-width: auto; text-align: left;" >
 							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #FF5558;">Product Designer:</span> I create tools and experiences that empower users to connect with their data, uncover insights, and make informed decisions. I love finding the sweet spot between aesthetics and functionality.</p>
 						</div>
 						<div style="width: auto; text-align: left;" >
@@ -57,11 +57,11 @@ const anim = {
 			</div>
 			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem;">
-					<div style="min-width: 1020px; max-width: 1080px; margin: auto;text-align: center;; margin-block-end: 4rem;">
+					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
 						<h2 style="font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
 						<p style="color: #999;">Here is some of my selected work that I've done recently</p>
 					</div>
-					<div style="min-width: 1020px; max-width: 1080px; margin: auto;">
+					<div style=" max-width: 1200px; margin: auto; padding: 0 2rem;">
 						 <div class="work-cover-container">
 							<a href="/explorer"> 
 								<figure class="content video-container" transition:name="hero">
@@ -109,7 +109,7 @@ const anim = {
 					</div>
 				</section>
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center;">
-					<div style="min-width: 1020px; max-width: 1080px; margin: auto;">
+					<div style="max-width: 1200px; margin: auto; padding: 0 2rem;">
 						<h2 style="font-size: 48px; font-weight: bold; margin-block-end: 1em;">Other work</h2>
 						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
 							<div class="work-cover-container">
@@ -266,6 +266,9 @@ const anim = {
 		border-radius: 2rem;
 		width: 100%;
 		max-width: 100%;
+	}
+	@media only screen and (max-width: 992px) {
+		#pattern-move-1 { display: none;}
 	}
 
 </style>

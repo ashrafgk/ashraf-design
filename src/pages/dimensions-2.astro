@@ -46,7 +46,8 @@ import Footer from '../components/Footer.astro';
                 <h2>Background</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>PowerMetrics allowed users the ability to filger and segment data based on metrics dimensions. However, with time, our customers have always voiced their need for more control over those dimensions, and for further capabilities that are required to deliver the metrics required by the end user, the business user. </p>
+                        <p>PowerMetrics enabled users to filter and segment data by metric dimensions. However, our customers have consistently expressed the need for more control over these dimensions and additional capabilities to deliver the metrics needed by end users and business users.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -56,7 +57,7 @@ import Footer from '../components/Footer.astro';
                 <div class="case-study--background-info-container" style="row-gap: 2rem;">
                     <div>
                         <h4 style="margin-bottom: 0.5rem;">New filter capabilities:</h4>
-                        <p>Allow the ability to filter on text, number, and dates beyond just the ability to select members.</p>
+                        <p>Enable filtering by text, numbers, and dates, not just by selecting specific members.</p>
                     </div>
                     <div>
                         <h4 style="margin-bottom: 0.5rem;">New dimensions types:</h4>
@@ -64,12 +65,12 @@ import Footer from '../components/Footer.astro';
                     </div>
                     <div>
                         <h4 style="margin-bottom: 0.5rem;">General metric capabilities:</h4>
-                        <p>Allow the user to have the ability to define a metric preset filters (that are key for defining a metric) or the ability to set default filters and segments to deliver the metric the business user requires. Also allow for a way to hide dimensions are not required or that could cause issues if changed.</p>
+                        <p>Allow users to define metric preset filters or set default filters and segments to deliver the metrics needed by business users. Additionally, provide an option to hide dimensions that are unnecessary or could cause issues if modified.</p>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h4 style="margin-bottom: 0.5rem;">New segmenting capabilities:</h4>
                         <p>Allow the ability to binning</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
            
@@ -77,11 +78,9 @@ import Footer from '../components/Footer.astro';
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Guiding principle: Maximize capability vs. Maximize compatibility</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>When we started the project, it was important to decide on a strategy that will guide us through the project. Are we aiming for maximizing capability or maximizing compatibility</p>
-                        <p>Maximize capability: We support as many features as we can for each metric type even if other metric types cannot support that feature. Note, we will need to define rules for what happens to downstream artifacts when metrics are reconfigured if those artifacts are using features no longer supported by the new metric type.
-                        </p>
-                        <p>Maximize compatibility: We support a set of features that can be supported for all metric types, ensuring that it is easy to transition between metric types when reconfiguring without downstream effects, and we maintain the perception that a metric has a standard and easily understood set of behaviors regardless of how it is defined. This means that some features may not be supported at all if they cannot be supported in general.
-                        </p>
+                        <p>At the project's outset, we needed to establish a strategy: should we prioritize maximizing capability or compatibility?</p>
+                        <p>Maximize capability: We support as many features as possible for each metric type, even if other metric types don’t support them. We’ll need to define rules for handling downstream artifacts when metrics are reconfigured and features are no longer supported by the new metric type.</p>
+                        <p>Maximize compatibility: We support a common set of features across all metric types, ensuring smooth transitions during reconfiguration without downstream effects. This approach maintains consistent and predictable behavior for all metrics, even if it means excluding features that cannot be universally supported.</p>
                         <p>We have elected to go for maximizing compatibility.</p>
                     </div>
                 </div>
@@ -93,13 +92,13 @@ import Footer from '../components/Footer.astro';
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">New filter capabilities:</h2>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>The introduction of new dimension types will require new and more advanced filtering methods for each type.</p>
                     </p>
                     <p>Key Requirements:</p>
                     <ul style="margin-top: 1rem;">
-                        <li>Text match filters </li>
-                        <li>Numeric members and range filters </li>
-                        <li>Date range filters on time dimensions (including multiple date range filters)</li>
+                        <li>Text match filters.</li>
+                        <li>Numeric members and range filters. </li>
+                        <li>Date range filters on time dimensions. </li>
                     </ul>
                 </div>
             </div>
@@ -107,46 +106,41 @@ import Footer from '../components/Footer.astro';
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">New filter capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Text match filters</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
-                    </p>
+                    <p>This advanced filtering method goes beyond simply selecting members. It supports various operators like "Equals," "Contains," and "Ends with," and allows for additional conditions to refine your filtering.</p>
                 </div>
             </div>
              <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
                     <img src="../img/work-dimensions--text-filter.png" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
             <div class="case-study--text-container">
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">New filter capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Numeric members and range filters</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
-                    </p>
+                    <p>This new numeric filtering method offers multiple options: use a range slider to select values, or create more advanced conditions for precise filtering. Useful for examples such as "Filter out companies under $10K spend".</p>
                 </div>
             </div>
             <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
                     <img src="../img/work-dimensions--number-filter.png" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
             <div class="case-study--text-container">
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">New filter capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Time (continuous) dimensions</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>This filtering method is practically using the current date filter to achieve the same concept, the only difference is the added possibility for creating multiple conditions. Useful for examples such as "Filter out companies with sign up date before Jan 1 2022, or show me arrival time vs departure time".
                     </p>
                 </div>
             </div>
             <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
                     <img src="../img/work-dimensions--date-filter.png" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
 
-            <!-- New segmeneting capabilities: -->
+            <!-- New segmeneting capabilities:
             <div class="case-study--text-container">
                 <div>
                     <h3 style="margin-bottom: 1rem;">New segmeneting capabilities:</h3>
@@ -163,7 +157,7 @@ import Footer from '../components/Footer.astro';
                     <img src="../img/work-explorer--exploration-space-2.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
                     <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
-            </div>
+            </div> -->
 
             <!-- New dimensions types -->
             <div class="case-study--text-container">
@@ -173,9 +167,9 @@ import Footer from '../components/Footer.astro';
                     </p>
                     <p>Key Requirements:</p>
                      <ul style="margin-top: 1rem;">
-                        <li>Numeric (discrete) dimensions </li>
-                        <li>Numeric (continuous) dimensions </li>
-                        <li>Time (continuous) dimensions </li>
+                        <li>Text dimension (already existed).</li>
+                        <li>Numeric (discrete/continuous) dimensions.</li>
+                        <li>Time (date/duration) dimensions.</li>
                     </ul>
                 </div>
             </div>
@@ -189,7 +183,7 @@ import Footer from '../components/Footer.astro';
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">General metric capabilities:</h2>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>Allow users to define metric preset filters or set default filters and segments to deliver the metrics needed by business users. Additionally, provide an option to hide dimensions that are unnecessary or could cause issues if modified.
                     </p>
                     <p>Key Requirements:</p>
                      <ul style="margin-top: 1rem;">
@@ -203,14 +197,13 @@ import Footer from '../components/Footer.astro';
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Preset Filters</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>The importance of a preset filter is it can be used to define a metric such as I have a dimension called "user events" that shows me "Churn", "Purchase" and "Extensions". So I only want this metric to show "Churn".</p>
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
 						<img src="../img/work-dimensions--preset-filters.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
            
@@ -218,31 +211,43 @@ import Footer from '../components/Footer.astro';
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Dimensions capabilities</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>Ability to control if the dimensions would show up as a filter option, a segment option, or completely hidden from users.
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
 						<img src="../img/work-dimensions--dimensions-capabilties.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
             <div class="case-study--text-container">
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Default Filters</h3>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
+                    <p>Default filter is a way to set the default way a metric is presented, but still allow the ability for that filter/sgement to be changed by the end user.
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
 						<img src="../img/work-dimensions--default-filter.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div>
-           
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
+            <div class="case-study--background">
+                <h2>Key business outcomes</h2>
+                <div class="case-study--background-info-container">
+                    <div>
+                        <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
+                            <li>30% increase in customers inviting view-only users in order to be able to explore their metrics more freely.</li>
+                            <li>Increased sign ups of the product by 12% since the release of the generative AI feature.</li>
+                            <li>More features requests from customers in order to extend the Explorer capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
             
             
                 
@@ -256,7 +261,7 @@ import Footer from '../components/Footer.astro';
 
 <style>
 	main {
-		background-color: #1a1a1a;
+		background-color: #0e0e0e;
 	}
 	h1 {
 		font-size: 4rem;

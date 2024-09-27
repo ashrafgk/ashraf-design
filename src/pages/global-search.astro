@@ -2,9 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-
-import { Image } from 'astro:assets';
-import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio | Dimension 2.0">
@@ -14,14 +11,12 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
 		<div style="position:relative; ">
         <section class="case-study--header">
             <div style="width: 800px; margin: 0 auto 3rem; display: grid; gap: 32px; text-align: center;">
-                <h1 style="margin-bottom: 2rem;" class="header-appear">PowerMetrics Assistant</h1>
-                <p class="subheader-appear">A contextual AI agent to help you through your PowerMetrics experience powered by our in-depth support documentations</p>
+                <h1 style="margin-bottom: 2rem;">Global Search</h1>
+                <p>A search mechanism within PowerMetrics that helps users locate various assets and settings/pages.</p>
             </div>
-			<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero2">
-                <figure class="content video-container" style=" background-color: #FFEE9B">
-                    <video class="pm-ai-video" muted autoplay loop style="width: 1200px; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
-                        <source src="../img/work-pm-ai--video.mp4">
-                    </video> 
+			<div class="case-study--full-container" style="margin-bottom: 5rem;">
+                <figure class="work-cover" transition:name="dimnesions-hero">
+                    <img alt="ashraf" src="../img/work-global-search--cover.png"  style="border-radius: 2rem;"  />
                 </figure>
             </div>
            
@@ -33,11 +28,11 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                     <div class="case-study--background-info">
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Name</h3>
-                            <p>PowerMetrics Assistant</p>
+                            <p>Global Search</p>
                         </div>
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Role</h3>
-                            <p>Project lead</p>
+                            <p>Project UX lead</p>
                             <p>Individual contributor</p>
                         </div>
                         <div>
@@ -51,15 +46,7 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <h2>Background</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>Users have not been utalizing our Support Website, with our support and success team getting more and more tickets answering questions that are otherwise available on the Support Website. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="case-study--background">
-                <h2>Opportunity</h2>
-                <div class="case-study--background-info-container" style="row-gap: 2rem;">
-                    <div>
-                        <p>An AI agent that is uses our support website as a reference material to answer user questions</h4>
+                        <p>Users are requesting the ability to search for assets regardless of where they are in the app. More specifically a hub that hosts all their assets from data feeds, metrics, to dashboards. Additionally it can serve as a way to navigate to other pages of the app a lot easier.</p>
                     </div>
                 </div>
             </div>
@@ -67,77 +54,66 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <h2>Requirements</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>To build a useful AI agent it must be able to do the following:</p>
+                        <p>To build a useful simple yet powerful global search feature it should include:</p>
                         <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-                            <li>Less hellucination, use only the support website as referance material.</li>
-                            <li>Ability to bookmark questions/answer for future reference.</li>
-                            <li>Ability to dock the Agent for ease of use and allow for more space.</li>
-                            <li>Provide relative questions to where the user is in the product.</li>
+                            <li>The ability to search all assets types.</li>
+                            <li>Extensible design for future additions suchs as service tokens and quick actions.</li>
+                            <li>Ability to preview the results</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+            
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <div class="case-study--text-container">
-                <h2 style="margin-bottom: 1rem; line-height: 150%;">Ask away</h2>
-                <p>A simple chatbot UI to ask questions and get answers quickly.</p>
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Zero state</h2>
             </div>
 
-			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-						<img src="../img/work-pm-assistant--question-answer.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
-                </figure>
-            </div>
-           
-            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
-
-            <div class="case-study--text-container">
-                <div>
-                    <h2 style="margin-bottom: 1rem;">Contextual help</h2>
-                    <p>Relative questions to where the user is in the product.</p>
-                </div>
-            </div>
-
-			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-                    <Image src={ImgContextual} alt="descriptive text" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" />
+             <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
+                    <img src="../img/work-global-search--zero-state.svg" loading="lazy">
                 </figure>
             </div>
 
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <div class="case-study--text-container">
-                <div>
-                    <h2 style="margin-bottom: 1rem;">Put it on the side</h2>
-                    <p>Dock the Agent for ease of use and allow for more space.</p>
-                </div>
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Search state</h2>
             </div>
-
-			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-						<img src="../img/work-pm-assistant--sidebar.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+            
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
+                    <img src="../img/work-global-search--search-state.svg" loading="lazy">
                 </figure>
             </div>
 
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <div class="case-study--text-container">
-                <div>
-                    <h2 style="margin-bottom: 1rem;">Save it for later</h2>
-                    <p>Bookmark your questions/answers for future reference.
-                    </p>
-                </div>
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Filter on a category</h2>
             </div>
-			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-						<img src="../img/work-pm-assistant--bookmark.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
+                    <img src="../img/work-global-search--categories.svg" loading="lazy">
                 </figure>
             </div>
 
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
+            <div class="case-study--text-container">
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Result preview</h2>
+            </div>
+
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
+                    <img src="../img/work-global-search--result-preview.svg" loading="lazy">
+                </figure>
+            </div>
+
+            
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
             <div class="case-study--background">
                 <h2>Key business outcomes</h2>
                 <div class="case-study--background-info-container">
@@ -153,11 +129,16 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
 
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
             
+            
+                
            
         </section>
         <Footer />
+    </div>
+    
 	</main>
 </Layout>
+
 <style>
 	main {
 		background-color: #0e0e0e;
