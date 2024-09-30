@@ -3,6 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PorjectsFooter from '../components/ProjectsFooter.astro';
+
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -17,7 +23,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				</div>
 				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
 					<figure class="work-cover" transition:name="explorer-hero">
-						<img alt="ashraf" src="../img/work-explorer--cover-2.png"  style="border-radius: 2rem;"  />
+						<Image src={ExplorerHero} alt="Metric Explorer" style="border-radius: 2rem;"  />
 					</figure>
 					<!-- <figure class="content video-container">
 						<video class="explorer-video" muted autoplay loop style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="media-player" transition:persist>
@@ -38,8 +44,9 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 							</div>
 							<div>
 								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Role</div>
-								<p>Project lead</p>
-								<p>Individual contributor</p>
+								<p>Project Lead</p>
+								<p>UX/UI Designer</p>
+								<p>Research</p>
 							</div>
 							<div>
 								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Year</div>
@@ -52,7 +59,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 					<h2>Background</h2>
 					<div class="case-study--background-info-container">
 						<div>
-							<p>PowerMetrics needed more advanced options for deeper data analysis. But it was crucial not to overwhelm less experienced users. By leavarging the power of AI and the recent emergence of very capable models, we can create an intuitive solution that enables anyone to ask questions about their data and receive accurate, actionable insights.</p>
+							<p>PowerMetrics required advanced features for deeper data analysis, but it was essential to maintain simplicity for less experienced users. By harnessing AI and leveraging cutting-edge models, we developed an intuitive solution that empowers users of all skill levels to ask questions and gain accurate, actionable insights from their data.</p>
 						</div>
 					</div>
 				</div>
@@ -70,10 +77,10 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 					<h2>Proposed solution</h2>
 					<div class="case-study--background-info-container">
 						<div>
-							<p>A space that allows free-form analysis and exploration of your data in depth and the ability to answer complex questions about it.</p>
+							<p>A flexible environment for in-depth data exploration and analysis, designed to help users answer complex questions with ease. Key components include:</p>
 							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
 								<li>1. Visualization Canvas</li>
-								<li>2. Advanced Analysis options</li>
+								<li>2. Advanced Analysis Tools</li>
 								<li>3. Exploration Sidebar</li>
 								<li>4. Generative AI</li>
 							</ul>
@@ -83,7 +90,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 
 				<div class="case-study--full-container" style="margin-bottom: 3rem;">
 					<figure class="content video-container">
-						<video class="explorer-video" autoplay muted loop playsinline style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;">
+						<video class="explorer-video" autoplay muted loop playsinline style="width: 1200px; max-width: 100%; margin: auto; border-radius: 1rem; overflow: hidden;">
 							<source src="../img/work-explorer--video.mp4" type="video/mp4">
 						</video> 
 					</figure> 
@@ -94,18 +101,18 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				<div class="case-study--text-container">
 					<div>
 						<div style="margin-bottom: 1rem; position: relative;"><span class="number">1</span><h3 style="position: relative;">Visualization Canvas</h3></div>
-						<p>A big open exploration space that puts the focus on the visualization that gives the user the breathing room to full capture every detail they need.</p>
-						<p>Key Requirements:</p>
+						<p>An expansive exploration space that prioritizes visual clarity, giving users the room to fully capture and analyze every detail.</p>
+						<p>Key Features:</p>
 						<ul style="margin-top: 1rem;">
-							<li>Spacous canvas to allow the user full absorb the visualization and get the insights</li>
-							<li>Ability to add more than one metric </li>
-							<li>Ability to chnage filters and aggregations </li>
+							<li>Flexible canvas for in-depth visualization and insights.</li>
+							<li>Support for visualizing multiple metrics simultaneously.</li>
+							<li>Easy adjustment of filters and aggregations for deeper analysis.</li>
 						</ul>
 					</div>
 				</div>
 				<div class="case-study--full-container" style="margin-bottom: 3rem;">
 					<figure>
-						<img src="../img/work-explorer--exploration-space-1.png" style="" loading="lazy">
+						<img src="../img/work-explorer--exploration-space-1.png" class="lazyload">
 						<figcaption>Visualization Canvas: All about the visualization and getting the insights.</figcaption>
 					</figure>
 				</div>
@@ -115,8 +122,9 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				<div class="case-study--text-container">
 					<div>
 						<div style="margin-bottom: 1rem; position: relative;"><span class="number">2</span><h3 style="position: relative;">Advanced Analysis</h3></div>
-						<p>Making effective decisions begins with understanding how your key business metrics are performing now and how they’re expected to perform in the future.</p>
-						<p>The normal range and forecast analysis tools help you assess past, current, and future trends in your metrics. You’ll be able to quickly identify outliers in your data and see a prediction of future metric performance.</p>
+						<p>Effective decision-making starts with understanding both current performance and future projections of your key business metrics.
+						</p>
+						<p>Tools like normal range and forecast analysis enable you to assess past, present, and future trends. Quickly identify outliers and predict future performance with ease.</p>
 						<p>Analysis Types:</p>
 						<ul style="margin-top: 1rem;">
 							<li>Linear Trend </li>
@@ -128,7 +136,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				</div>
 				<div class="case-study--full-container" style="margin-bottom: 3rem;">
 					<figure>
-						<img src="../img/work-explorer--advanced-analysis-1.png" style="" loading="lazy">
+						<img src="../img/work-explorer--advanced-analysis-1.png" class="lazyload">
 						<figcaption><strong>Advanced Analysis:</strong> A set of tools that help you assess past, current, and future trends in your metrics.</figcaption>
 					</figure>
 				</div>
@@ -138,34 +146,33 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				<div class="case-study--text-container">
 					<div>
 						<div style="margin-bottom: 1rem; position: relative;"><span class="number">3</span><h3 style="position: relative;">Exploration sidebar</h3></div>
-						<p>This is where you will find all settings you need to fine tune your visualization to get the insight you are looking for.
-						</p>
+						<p>A control center for fine-tuning your visualizations and uncovering the insights you need.</p>
 						<p>Key Requirements:</p>
 						<ul style="margin-top: 1rem;">
-							<li>Ability to change visualizations types.</li>
-							<li>The visualizations type should impact the rest of the menu settings. </li>
-							<li>Ability to select segmentations. </li>
-							<li>Ability to select comparison types. </li>
-							<li>Ability to chaing the sorting. </li>
+							<li>Change visualization types dynamically.</li>
+							<li>Menu settings adapt based on selected visualization.</li>
+							<li>Choose segmentations and comparison types.</li>
+							<li>Adjust sorting options with ease. </li>
+							<li>Enable advanced analysis.</li>
 						</ul>
 					</div>
 				</div>
 			
 				<div class="case-study--full-container" style="margin-bottom: 3rem;">
 					<figure>
-						<img src="../img/work-explorer--sidebar-options.png" style="" loading="lazy">
+						<img src="../img/work-explorer--sidebar-options.png" class="lazyload">
 						<figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
 					</figure>
 				</div>
 				<div class="case-study--large-container" style="margin-bottom: 3rem;display: grid; gap: 16px;">
-					<figure style="        width: 100%;">
-						<img src="../img/work-explorer--sidebar-1.png" style="border-radius: 1.25rem;" loading="lazy">
+					<figure style="width: 100%;">
+						<img src="../img/work-explorer--sidebar-1.png" style="border-radius: 1.25rem;" class="lazyload">
 					</figure>
-					<figure style="        width: 100%;">
-						<img src="../img/work-explorer--sidebar-2.png" style="border-radius: 1.25rem;" loading="lazy">
+					<figure style="width: 100%;">
+						<img src="../img/work-explorer--sidebar-2.png" style="border-radius: 1.25rem;" class="lazyload">
 					</figure>
-					<figure style="        width: 100%;">
-						<img src="../img/work-explorer--sidebar-3.png" style="border-radius: 1.25rem;" loading="lazy">
+					<figure style="width: 100%;">
+						<img src="../img/work-explorer--sidebar-3.png" style="border-radius: 1.25rem;" class="lazyload">
 					</figure>
 				</div>
 
@@ -174,16 +181,16 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				<div class="case-study--text-container">
 					<div>
 						<div style="margin-bottom: 1rem; position: relative;"><span class="number">4</span><h3 style="position: relative;">Generative AI</h3></div>
-						<p>Metrics are one of the most actionable tools for producing quality outcomes, as they provide essential context. When combined with natural language processing, we believe generative AI driven by metrics becomes a powerful and reliable asset, designed specifically for this purpose. Our goal is to enhance value for business users by integrating generative AI into their interaction with metrics.</p>
-						<p>We are beginning with a focused application of generative AI that minimizes hallucination, ensuring that users can trust both the metrics and the insights generated. Building and maintaining this trust is key as we introduce AI-driven solutions.</p>
+						<p>Metrics are critical tools for driving outcomes by providing essential context. When paired with natural language processing, generative AI powered by metrics becomes a valuable asset for business users. Our focus is on integrating generative AI into metric interactions to enhance decision-making and provide actionable insights.</p>
+						<p>We’re starting with a targeted AI application that minimizes hallucinations, ensuring users can trust both the data and the insights generated. Building and maintaining this trust is essential as we roll out AI-driven solutions.</p>
 						<p>Key Requirements:</p>
 						<ul style="margin-top: 1rem;">
-							<li>Ability to ask a natural language question about the metrics, including the ability to perform filters, segments, advanced analysis, time ranges, multi-metrics, etc.</li>
-							<li>Ability to keep context, whether it remembers previous questions or understand the current metric shown as a reference. </li>
-							<li>Have a history of previously typed questions available.</li>
-							<li>Provide a feedback mechanism so users can indicate whether it’s helpful (e.g., thumbs up/thumbs down). Helps us learn and improve our implementation. </li>
-							<li>Support auto-completion for metric name for better accuracy (in case of multiple metrics with similar names). </li>
-							<li>Minimize hallucination through referencing examples of user intention.</li>
+							<li>Natural language queries for metrics, including filters, segments, advanced analysis, time ranges, and multiple metrics.</li>
+							<li>Context retention, allowing the AI to remember previous questions or understand current metrics as references.</li>
+							<li>History of previously asked questions for easy reference.</li>
+							<li>Feedback mechanism (e.g., thumbs up/down) to improve accuracy and user satisfaction.</li>
+							<li>Auto-completion for metric names to enhance precision. </li>
+							<li>Minimized hallucinations through referencing user intent examples.</li>
 						</ul>
 					</div>
 				</div>
@@ -196,7 +203,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 				</div>
 				<div class="case-study--large-container" style="margin-bottom: 3rem;">
 					<figure>
-						<img src="../img/work-explorer--gen-ai.png" style="" loading="lazy">
+						<img src="../img/work-explorer--gen-ai.png" class="lazyload">
 						<figcaption>The various different states of the AI input field</figcaption>
 					</figure>
 				</div>
@@ -204,15 +211,15 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 					<div>
 						<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Generative AI</div>
 						<h4 style="margin-bottom: 1rem;">History checkpoints</h4>
-						<p>The AI keeps context of previous requests, and that could have an impact on how it answers after. We also wanted to give the user checkpoints to get back to if they want.</p>
+						<p>The AI retains context from previous requests, influencing future responses. We also provide users with checkpoints, allowing them to easily return to previous states as needed.</p>
 					</div>
 				</div>
 				<div class="case-study--large-container" style="margin-bottom: 3rem;display: grid;grid-template-columns: 1fr 1fr;gap: 16px;">
 					<figure>
-						<img src="../img/work-explorer--history1.png" style="" loading="lazy">
+						<img src="../img/work-explorer--history1.png" class="lazyload">
 					</figure>
 					<figure>
-						<img src="../img/work-explorer--history2.png" style="" loading="lazy">
+						<img src="../img/work-explorer--history2.png" class="lazyload">
 					</figure>
 				</div>
 				<div class="case-study--text-container">
@@ -243,7 +250,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 
 							<div class="table-row">
 								<div><p>Forecast</p></div>
-								<div><p>What do the website pageviews look like the next 6 months?</p></div>
+								<div><p>What do the website pageviews look like in the next 6 months?</p></div>
 							</div>
 							
 							<div class="table-row">
@@ -256,7 +263,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 							</div>
 							<div class="table-row">
 								<div><p>Math</p></div>
-								<div><p>What is the website total users count for last year?</p></div>
+								<div><p>What is the website's total users count for last year?</p></div>
 							</div>
 							<div class="table-row">
 								<div><p>Breakdown</p></div>
@@ -272,7 +279,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 							</div>
 							<div class="table-row">
 								<div><p>Out of scope, gibberish, impossible</p></div>
-								<div><p>How old is Elon Musk?, Show me revenue by revenue, jigerginrgin</p></div>
+								<div><p>How old is Elon Musk?, Show me revenue by revenue, "Jiwnnfnreube"</p></div>
 							</div>
 							<div class="table-row">
 								<div><p>Reset</p></div>
@@ -289,11 +296,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 							</div>
 							<div class="table-row">
 								<div><p>Expected range</p></div>
-								<div><p>How is my revenue expected to behave? Is my proft behaving normally?</p></div>
+								<div><p>How is my revenue expected to behave? Is my profit behaving normally?</p></div>
 							</div>
 							<div class="table-row">
 								<div><p>Composite intention</p></div>
-								<div><p>Compare my cost and revnue, broken down by X</p></div>
+								<div><p>Compare my cost and revenue, broken down by X</p></div>
 							</div>
 							
 							<div class="table-row">
@@ -334,9 +341,9 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 					<div class="case-study--background-info-container">
 						<div>
 							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-								<li>30% increase in customers inviting view-only users in order to be able to explore their metrics more freely.</li>
-								<li>Increased sign ups of the product by 12% since the release of the generative AI feature due to buzz generated.</li>
-								<li>More features requests from customers in order to extend the Explorer capabilities.</li>
+								<li>30% increase in customers inviting view-only users, enabling more flexible metric exploration for their end/business users.</li>
+								<li>12% growth in product sign-ups following the launch of the generative AI feature, driven by heightened interest.</li>
+								<li>Increased customer requests for additional features to expand Explorer capabilities.</li>
 							</ul>
 						</div>
 					</div>

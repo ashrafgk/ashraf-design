@@ -3,6 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Footer from '../components/Footer.astro';
 
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
+
 const anim = {
 	old: {
 	  name: 'bump',
@@ -63,7 +71,7 @@ const anim = {
 						 <div class="work-cover-container">
 							<a href="/explorer"> 
 								<figure class="work-cover" transition:name="explorer-hero">
-									<img alt="ashraf" src="../img/work-explorer--cover-2.png" class="" loading="lazy">
+									<Image src={ExplorerHero} alt="Metric Explorer" />
 								</figure>
 							</a>
 							<a href="explorer.html" class="work-title">Metric Explorer (2024)</a>
@@ -79,7 +87,7 @@ const anim = {
 						<div class="work-cover-container">
 							<a href="/dimensions-2"> 
 								<figure style="" class="work-cover" transition:name="dimnesions-hero">
-									<img alt="ashraf" src="../img/work-dimensions-2--cover.png" class="" loading="lazy">
+									<Image src={DimensionsHero} alt="DimensionsHero Explorer" />
 								</figure>
 							</a>
 							<a href="/dimensions-2" class="work-title">Dimensions 2.0 (2024)</a>
@@ -87,7 +95,7 @@ const anim = {
 						<div class="work-cover-container">
 							<a href="/pm-assistant"> 
 								<figure class="work-cover" transition:name="pm-assistant-hero">
-									<img alt="ashraf" src="../img/work-pm-assistant--cover.png" class="" loading="lazy">
+									<Image src={PmAssistHero} alt="PmAssistHero Explorer" />
 									<!-- <video class="pm-ai-video" muted autoplay loop style="width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
 										<source src="../img/work-pm-ai--video.mp4">
 									</video>  -->
@@ -98,7 +106,7 @@ const anim = {
 						 <div class="work-cover-container">
 							<a href="/global-search"> 
 								<figure style="" class="work-cover" transition:name="global-searach-hero">
-									<img alt="ashraf" src="../img/work-global-search--cover.png" class=""  loading="lazy">
+									<Image src={GlobalSearchHero} alt="GlobalSearchHero Explorer" />
 								</figure>
 							</a>
 							<a href="/global-search" class="work-title">Assets Global Search (2023)</a>
@@ -112,7 +120,7 @@ const anim = {
 							<div class="work-cover-container">
 								<a href="/klipfolio-homepage-2024"> 
 									<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2024-hero" >
-										<img alt="ashraf" src="../img/klipfolio-homepage-2024-cover.png" loading="lazy">
+										<Image src={Homepage2024Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
 								<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.75rem;">Klipfolio Homepage (2024)</a>
@@ -120,7 +128,7 @@ const anim = {
 							<div class="work-cover-container">
 								<a href="/klipfolio-homepage-2023"> 
 									<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2023-hero" >
-										<img alt="ashraf" src="../img/klipfolio-homepage-2023-cover.png" loading="lazy">
+										<Image src={Homepage2023Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
 								<a href="/klipfolio-homepage-2023" class="work-title" style="font-size: 1.75rem;">Klipfolio Homepage (2023)</a>

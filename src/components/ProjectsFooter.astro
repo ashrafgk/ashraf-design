@@ -1,3 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
+
+---
+
 <div style="padding: 10rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 	<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem; ">
 		<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
@@ -7,7 +18,7 @@
 			 <div class="work-cover-container">
 				<a href="/explorer"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/work-explorer--cover-2.png" class="" loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={ExplorerHero} alt="Metric Explorer" style="border-radius: 1.25rem;" />
 					</figure>
 				</a>
 				<a href="explorer.html" class="work-title" style="font-size: 1.25rem; font-weight: bold;">Metric Explorer (2024)</a>
@@ -15,7 +26,7 @@
 			<div class="work-cover-container">
 				<a href="/dimensions-2"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/work-dimensions-2--cover.png" class="" loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={DimensionsHero} alt="Metric Explorer" style="border-radius: 1.25rem;" />
 					</figure>
 				</a>
 				<a href="/dimensions-2" class="work-title" style="font-size: 1.25rem; font-weight: bold;">Dimensions 2.0 (2024)</a>
@@ -23,7 +34,7 @@
 			<div class="work-cover-container">
 				<a href="/pm-assistant"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/work-pm-assistant--cover.png" class="" loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={PmAssistHero} alt="Metric Explorer" style="border-radius: 1.25rem;" />
 					</figure>
 				</a>
 				<a href="/pm-assistant" class="work-title" style="font-size: 1.25rem; font-weight: bold;">PowerMetrics Assistant (2023)</a>
@@ -31,7 +42,7 @@
 			 <div class="work-cover-container">
 				<a href="/global-search"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/work-global-search--cover.png" class=""  loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={GlobalSearchHero} alt="Metric Explorer" style="border-radius: 1.25rem;" />
 					</figure>
 				</a>
 				<a href="/global-search" class="work-title" style="font-size: 1.25rem; font-weight: bold;">Assets Global Search (2023)</a>
@@ -39,7 +50,7 @@
 			<div class="work-cover-container">
 				<a href="/klipfolio-homepage-2024"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/klipfolio-homepage-2024-cover.png" loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={Homepage2024Hero} alt="Metric Explorer" style="border-radius: 1.25rem;" />
 					</figure>
 				</a>
 				<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.25rem; font-weight: bold;">Klipfolio Homepage (2024)</a>
@@ -47,7 +58,7 @@
 			<div class="work-cover-container">
 				<a href="/klipfolio-homepage-2023"> 
 					<figure style="margin-block-end: 1rem;" class="work-cover">
-						<img alt="ashraf" src="../img/klipfolio-homepage-2023-cover.png" loading="lazy" style="border-radius: 1.25rem;">
+						<Image src={Homepage2023Hero} alt="Metric Explorer" style="border-radius: 1.25rem;"/>
 					</figure>
 				</a>
 				<a href="/klipfolio-homepage-2023" class="work-title" style="font-size: 1.25rem; font-weight: bold;">Klipfolio Homepage (2023)</a>
