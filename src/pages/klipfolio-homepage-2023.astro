@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import PorjectsFooter from '../components/ProjectsFooter.astro';
 
 ---
 
@@ -15,9 +16,9 @@ import Footer from '../components/Footer.astro';
 					<h1 style="margin-bottom: 2rem;" class="header-appear">Klipfolio Homepage (2023)</h1>
 					<p class="subheader-appear">A powerful tool designed for advanced analysis, offering seamless AI integration to simplify complex tasks and enhance overall ease of use.</p>
 				</div>
-				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="klipfolio-homepage-hero-2023">
-					<figure class="work-cover" transition:name="klipfolio-homepage-hero-2023">
-						<img alt="ashraf" src="../img/klipfolio-homepage-2023.jpg" style="border-radius: 2rem;" />
+				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
+					<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2024-hero" >
+						<img alt="ashraf" src="../img/klipfolio-homepage-2023-cover.png" loading="lazy"  style="border-radius: 2rem;" >
 					</figure>
 				</div>
 			
@@ -42,12 +43,18 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</div>
 				</div>
-			
+
+				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
+					<figure class="work-cover">
+						<img alt="ashraf" src="../img/klipfolio-homepage-2023.jpg" style="border-radius: 2rem;" class="vertical-reveal " />
+					</figure>
+				</div>
 
 				
 
 				<div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 			</section>
+			<PorjectsFooter />
 			<Footer />
 		</div>
 	</main>

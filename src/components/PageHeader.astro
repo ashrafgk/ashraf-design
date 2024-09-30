@@ -175,10 +175,21 @@
 	}
 
 	
+	@keyframes scale-down {
+		from {
+			transform: scale(12.5);
+		}
 
+		to {
+			transform: scale(1);
+		}
+	}
 	.header-image {
 		margin: auto;
 		grid-area: cover;
+		/* animation: scale-down linear forwards;
+		animation-duration: 1s;
+		animation-delay: 0s; */
 	}
 	.header-text {
 		margin: auto;

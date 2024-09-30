@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-
+import PorjectsFooter from '../components/ProjectsFooter.astro';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -15,12 +15,15 @@ import Footer from '../components/Footer.astro';
 					<h1 style="margin-bottom: 2rem;" class="header-appear">Metric Explorer</h1>
 					<p class="subheader-appear">A powerful tool designed for advanced analysis, offering seamless AI integration to simplify complex tasks and enhance overall ease of use.</p>
 				</div>
-				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero">
-					<figure class="content video-container">
+				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
+					<figure class="work-cover" transition:name="explorer-hero">
+						<img alt="ashraf" src="../img/work-explorer--cover-2.png"  style="border-radius: 2rem;"  />
+					</figure>
+					<!-- <figure class="content video-container">
 						<video class="explorer-video" muted autoplay loop style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="media-player" transition:persist>
 							<source src="../img/work-explorer--video.mp4">
 						</video> 
-					</figure>
+					</figure> -->
 				</div>
 			
 			</section>
@@ -62,12 +65,7 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</div>
 				</div> -->
-				<!-- <div class="case-study--text-container" style="margin-bottom: 5rem;">
-					<figure>
-						<img src="../img/work-explorer--metric-overview.png" style="">
-						<figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
-					</figure>
-				</div> -->
+				
 				<div class="case-study--background">
 					<h2>Proposed solution</h2>
 					<div class="case-study--background-info-container">
@@ -82,6 +80,14 @@ import Footer from '../components/Footer.astro';
 						</div>
 					</div>
 				</div>
+
+				<div class="case-study--full-container" style="margin-bottom: 3rem;">
+					<figure class="content video-container">
+						<video class="explorer-video" autoplay muted loop playsinline style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;">
+							<source src="../img/work-explorer--video.mp4" type="video/mp4">
+						</video> 
+					</figure> 
+				</div> 
 
 				<div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
@@ -183,8 +189,8 @@ import Footer from '../components/Footer.astro';
 				</div>
 				<div class="case-study--full-container" style="margin-bottom: 3rem;">
 					<figure>
-						<video muted autoplay loop style="border-radius: 2rem; width: 100%;">
-							<source src="../img/work-explorer--gen-ai.mp4">
+						<video autoplay muted loop playsinline style="border-radius: 2rem; width: 100%;">
+							<source src="../img/work-explorer--gen-ai.mp4" type="video/mp4">
 						</video> 
 					</figure>
 				</div>
@@ -338,6 +344,7 @@ import Footer from '../components/Footer.astro';
 
 				<div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 			</section>
+			<PorjectsFooter />
 			<Footer />
 		</div>
 	</main>
@@ -345,7 +352,7 @@ import Footer from '../components/Footer.astro';
 
 <style>
 	main {
-		background-color: #0e0e0e;
+		background: linear-gradient(#1e1e1e, #0e0e0e 20%);
 	}
 	h1 {
 		font-size: 4rem;

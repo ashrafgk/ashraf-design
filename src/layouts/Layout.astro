@@ -34,82 +34,24 @@ const { title } = Astro.props;
 	@view-transition {
   		navigation: auto;
 	}
-	@keyframes slide-in-from-left {
-	from {
-		translate: -100vw 0;
-	}
-	
-}
-
-@keyframes slide-in-from-right {
-	from {
-		translate: 100vw 0;
-	}
-}
-@keyframes slide-out-to-left {
-	to {
-		translate: -100vw 0;
-	}
-}
-@keyframes slide-out-to-right {
-	to {
-		translate: 100vw 0;
-	}
-}
-@keyframes scale-up {
-	from {
-		scale: 0;
-	}
-}
-@keyframes scale-down {
-	to {
-		scale: 0;
-	}
-}
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-}
-@keyframes fade-out {
-	to {
-		opacity: 0;
-	}
-}
-	html:active-view-transition-type(forwards, backwards) {
-		.explorer-video {
-			view-transition-name: media-player;
+	@keyframes scale-up {
+		from {
+			scale: 0;
 		}
 	}
-
-	/* Animation styles for forwards type only */
-	html:active-view-transition-type(forwards) {
-		&::view-transition-old(content) {
-			animation-name: slide-out-to-left;
-		}
-		&::view-transition-new(content) {
-			animation-name: slide-in-from-right;
+	@keyframes scale-down {
+		to {
+			scale: 0;
 		}
 	}
-
-	/* Animation styles for backwards type only */
-	html:active-view-transition-type(backwards) {
-		&::view-transition-old(content) {
-			animation-name: slide-out-to-right;
-		}
-		&::view-transition-new(content) {
-			animation-name: slide-in-from-left;
+	@keyframes fade-in {
+		from {
+			opacity: 0;
 		}
 	}
-
-	/* Animation styles for reload type only */
-	html:active-view-transition-type(reload) {
-		&::view-transition-old(root) {
-			animation-name: fade-out, scale-down;
-		}
-		&::view-transition-new(root) {
-			animation-delay: 0.25s;
-			animation-name: fade-in, scale-up;
+	@keyframes fade-out {
+		to {
+			opacity: 0;
 		}
 	}
 	@keyframes dropping {
@@ -127,18 +69,39 @@ const { title } = Astro.props;
 		animation-timeline: scroll(block nearest);
 		animation-range: entry exit-crossing 50%;
 	}
-	@keyframes darken {
-		from {
-			background: #888;
-		}
-		to {
-			background: red;
-		}
-	}
-
 	@keyframes shadow {
 		to {
 			border-bottom: 2px solid #555;
+		}
+	}
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			clip-path: inset(0% 90% 0% 0%);
+		}
+		to {
+			opacity: 1;
+			clip-path: inset(0% 0% 0% 0%);
+		}
+	}
+	@keyframes reveal-vertical {
+		from {
+			opacity: 0;
+			clip-path: inset(0% 0% 100% 0%) ;
+		}
+		to {
+			opacity: 1;
+			clip-path: inset(0% 0% 0% 0%);
+		}
+	}
+	@keyframes text-reveal {
+		from {
+			opacity: 0;
+			filter:blur(4px)
+		}
+		to {
+			opacity: 1;
+			filter:blur(0px)
 		}
 	}
 	:root {
@@ -159,24 +122,24 @@ const { title } = Astro.props;
 	}
 
 	html.lenis, html.lenis body {
-  height: auto;
-}
+		height: auto;
+	}
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
+	.lenis.lenis-smooth {
+		scroll-behavior: auto !important;
+	}
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+	.lenis.lenis-smooth [data-lenis-prevent] {
+		overscroll-behavior: contain;
+	}
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+	.lenis.lenis-stopped {
+		overflow: hidden;
+	}
 
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
+	.lenis.lenis-smooth iframe {
+		pointer-events: none;
+	}
 
 	@view-transition {
 		navigation: auto;
@@ -264,6 +227,7 @@ const { title } = Astro.props;
 			font-size: 20px;
 			line-height: 150%;
 		}
+		
 
 		ul {
 			list-style: disc;
@@ -329,6 +293,33 @@ const { title } = Astro.props;
 			margin: 0rem auto 1rem;
 			border-radius: 2rem;
 			overflow: hidden;
+		
+			/* Create View Timeline */
+			view-timeline-name: --revealing-image;
+			view-timeline-axis: block;
+
+			/* Attach animation, linked to the  View Timeline */
+			animation: linear reveal both;
+			animation-timeline: --revealing-image;
+
+			/* Tweak range when effect should run*/
+			animation-range: entry 25% cover 40%;
+		}
+		img.vertical-reveal {
+			margin: 0rem auto 1rem;
+			border-radius: 2rem;
+			overflow: hidden;
+		
+			/* Create View Timeline */
+			view-timeline-name: --vertical-revealing-image;
+			view-timeline-axis: block;
+
+			/* Attach animation, linked to the  View Timeline */
+			animation: linear reveal-vertical both;
+			animation-timeline: --vertical-revealing-image;
+
+			/* Tweak range when effect should run*/
+			animation-range: entry 25% cover 22%;
 		}
 	}
 
@@ -374,6 +365,8 @@ const { title } = Astro.props;
 			margin-bottom: 0.5rem;
 		}
 
+		
+
 		figcaption {
 			text-align: center;
 			font-size: 14px;
@@ -416,6 +409,7 @@ const { title } = Astro.props;
 		top: 0;
 		background: #0e0e0e;
 		border-bottom: 2px solid #555;
+		background-color: #0e0e0e;
 		
 	}
 
@@ -443,39 +437,39 @@ const { title } = Astro.props;
 			}
 		}
 	}
-		.case-study--background {
+	.case-study--background {
+		display: grid;
+		max-width: 800px;
+		width: 100%;
+		margin: auto;
+		grid-template-columns: 100%;
+		gap: 30px;
+
+		.case-study--background-info {
 			display: grid;
-			max-width: 800px;
-			width: 100%;
-			margin: auto;
 			grid-template-columns: 100%;
 			gap: 30px;
-
-			.case-study--background-info {
-				display: grid;
-				grid-template-columns: 100%;
-				gap: 30px;
-			}
-
-			.case-study--background-info-container {
-				display: grid;
-				gap: 30px;
-			}
 		}
 
-		figure {
-			width: auto;
-		}
-
-		.video-container {
-			padding: 1.5rem;
-			background: #cbcbcb;
-			border-radius: 1rem;
-			overflow: hidden;
-			margin-bottom: 1rem;
-			video {
-				box-shadow: 0px 128px 64px 0px rgba(0, 0, 0, 0.16), 0px 16px 16px 0px rgba(0, 0, 0, 0.16), 0px 96px 96px 0px rgba(0, 0, 0, 0.16), 0px 36px 36px 0px rgba(0, 0, 0, 0.16);
-			}
+		.case-study--background-info-container {
+			display: grid;
+			gap: 30px;
 		}
 	}
+
+	figure {
+		width: auto;
+	}
+
+	.video-container {
+		padding: 1.5rem;
+		background: #cbcbcb;
+		border-radius: 1rem;
+		overflow: hidden;
+		margin-bottom: 1rem;
+		video {
+			box-shadow: 0px 128px 64px 0px rgba(0, 0, 0, 0.16), 0px 16px 16px 0px rgba(0, 0, 0, 0.16), 0px 96px 96px 0px rgba(0, 0, 0, 0.16), 0px 36px 36px 0px rgba(0, 0, 0, 0.16);
+		}
+	}
+}
 </style>

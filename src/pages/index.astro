@@ -31,15 +31,13 @@ const anim = {
 			<PageHeader />
 	
 			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
-				<section style="max-width: 1800px; padding: 10rem 0; align-items: center;justify-content: center; display: flex; flex-direction: column; margin: auto; position: relative;">
-					<div style="position: absolute; top: 0px; left: 0" id="pattern-move-1" class="pattern-move-1"><img src="../img/pattern-top.svg"></div>
-					<div style="position: absolute; bottom: -500px; right: 0" id="pattern-move-2" class="pattern-move-2"><img src="../img/pattern-bottom.svg"></div>
-					<div style="max-width: 780px; margin: 0; margin-block-end: 3rem; padding: 0 2rem; position: relative; z-index: 2;" >
+				<section style="" class="bio-container">
+					<div style="" class="bio--header">
 						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">Hi, I am a designer who cares about creating beautiful experiences that people can find useful.</p>
 						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">With over a decade of experience in brand and product design, I’ve helped small companies unlock their potential.</p>
 						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left;">Currently, I’m at Klipfolio, where I juggle multiple roles every day:</p>
 					</div>
-					<div style="max-width: 780px; display: grid; grid-template-columns: 1fr; gap: 3rem; margin-block-end: 2rem; padding: 0 2rem;">
+					<div style=""  class="bio--roles">
 						<div style="max-width: auto; text-align: left;" >
 							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #FF5558;">Product Designer:</span> I create tools and experiences that empower users to connect with their data, uncover insights, and make informed decisions. I love finding the sweet spot between aesthetics and functionality.</p>
 						</div>
@@ -64,10 +62,8 @@ const anim = {
 					<div style=" max-width: 1200px; margin: auto; padding: 0 2rem;">
 						 <div class="work-cover-container">
 							<a href="/explorer"> 
-								<figure class="content video-container" transition:name="hero">
-									<video class="explorer-video" muted autoplay loop style="width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="media-player" transition:persist>
-										<source src="../img/work-explorer--video.mp4">
-									</video> 
+								<figure class="work-cover" transition:name="explorer-hero">
+									<img alt="ashraf" src="../img/work-explorer--cover-2.png" class="" loading="lazy">
 								</figure>
 							</a>
 							<a href="explorer.html" class="work-title">Metric Explorer (2024)</a>
@@ -90,17 +86,18 @@ const anim = {
 						</div>
 						<div class="work-cover-container">
 							<a href="/pm-assistant"> 
-								<figure class="content video-container" style=" background-color: #FFEE9B" transition:name="hero2">
-									<video class="pm-ai-video" muted autoplay loop style="width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
+								<figure class="work-cover" transition:name="pm-assistant-hero">
+									<img alt="ashraf" src="../img/work-pm-assistant--cover.png" class="" loading="lazy">
+									<!-- <video class="pm-ai-video" muted autoplay loop style="width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
 										<source src="../img/work-pm-ai--video.mp4">
-									</video> 
+									</video>  -->
 								</figure>
 							</a>
 							<a href="/pm-assistant" class="work-title">PowerMetrics Assistant (2023)</a>
 						</div>
 						 <div class="work-cover-container">
 							<a href="/global-search"> 
-								<figure style="" class="work-cover">
+								<figure style="" class="work-cover" transition:name="global-searach-hero">
 									<img alt="ashraf" src="../img/work-global-search--cover.png" class=""  loading="lazy">
 								</figure>
 							</a>
@@ -113,16 +110,16 @@ const anim = {
 						<h2 style="font-size: 48px; font-weight: bold; margin-block-end: 1em;">Other work</h2>
 						<div class="other-work-grid">
 							<div class="work-cover-container">
-								<a href="/global-search"> 
-									<figure class="work-cover" style="border-radius: 1rem;" >
+								<a href="/klipfolio-homepage-2024"> 
+									<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2024-hero" >
 										<img alt="ashraf" src="../img/klipfolio-homepage-2024-cover.png" loading="lazy">
 									</figure>
 								</a>
 								<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.75rem;">Klipfolio Homepage (2024)</a>
 							</div>
 							<div class="work-cover-container">
-								<a href="/global-search"> 
-									<figure class="work-cover" style="border-radius: 1rem;">
+								<a href="/klipfolio-homepage-2023"> 
+									<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2023-hero" >
 										<img alt="ashraf" src="../img/klipfolio-homepage-2023-cover.png" loading="lazy">
 									</figure>
 								</a>
@@ -190,6 +187,62 @@ const anim = {
 			transform: translateY(-220px);
 			
 		}
+	}
+
+	
+
+	@keyframes text-reveal {
+		from {
+			opacity: 0;
+			/* clip-path: inset(100% 0% 100% 0%); */
+			filter: blur(5px);
+		}
+		to {
+			opacity: 1;
+			/* clip-path: inset(0% 0% 0% 0%); */
+			filter: blur(0px);
+		}
+	}
+
+	.bio-container {
+		max-width: 1800px; 
+		padding: 10rem 0; 
+		align-items: center;
+		justify-content: center; 
+		display: flex; 
+		flex-direction: column; 
+		margin: auto; 
+		position: relative;
+		p {
+			/* Create View Timeline */
+			view-timeline-name: --revealing-text;
+			view-timeline-axis: block;
+
+			/* Attach animation, linked to the  View Timeline */
+			animation: linear text-reveal both;
+			animation-timeline: --revealing-text;
+
+			/* Tweak range when effect should run*/
+			animation-range: entry 20% cover 60%;
+		}
+	}
+
+	.bio--header {
+		max-width: 780px;
+		margin: 0; 
+		margin-block-end: 3rem; 
+		padding: 0 2rem; 
+		position: relative; 
+		z-index: 2;
+	}
+
+	.bio--roles {
+		max-width: 780px; 
+		display: grid; 
+		grid-template-columns: 1fr; 
+		gap: 3rem; 
+		margin-block-end: 2rem; 
+		padding: 0 2rem;
 	}
 	
 	/* work */
