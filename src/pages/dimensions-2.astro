@@ -3,6 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PorjectsFooter from '../components/ProjectsFooter.astro';
+
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -13,11 +21,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
         <section class="case-study--header">
             <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
                 <h1 style="margin-bottom: 2rem;">Dimensions 2.0</h1>
-                <p>An enhanced way to get the most out of your data</p>
+                <p>Enhanced support for metric dimensions, with improved filtering and segmentation capabilities.</p>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure class="work-cover" transition:name="dimnesions-hero">
-                    <img alt="ashraf" src="../img/work-dimensions-2--cover.png"  style="border-radius: 2rem;"  />
+                    <Image src={DimensionsHero} alt="PmAssistHero Explorer" style="border-radius: 2rem;"  />
                 </figure>
             </div>
            
@@ -62,11 +70,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                     </div>
                     <div>
                         <h4 style="margin-bottom: 0.5rem;">New dimensions types:</h4>
-                        <p>Extending the dimensions types to include numbers (Continueous and discrete), dates, and durations.</p>
+                        <p>Extending the dimensions types to include numbers (Continuous and discrete), dates, and durations.</p>
                     </div>
                     <div>
                         <h4 style="margin-bottom: 0.5rem;">General metric capabilities:</h4>
-                        <p>Allow users to define metric preset filters or set default filters and segments to deliver the metrics needed by business users. Additionally, provide an option to hide dimensions that are unnecessary or could cause issues if modified.</p>
+                        <p>Allow users to define metric preset filters or set default filters and segments to deliver the metrics needed by business users. Additionally, provide an option to hide dimensions that are unnecessary or could cause issues or confusions if modified.</p>
                     </div>
                     <!-- <div>
                         <h4 style="margin-bottom: 0.5rem;">New segmenting capabilities:</h4>
@@ -87,7 +95,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 </div>
             </div>
             
-            
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <!-- New filter capabilities: -->
             <div class="case-study--text-container">
@@ -112,7 +120,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
              <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-dimensions--text-filter.png" loading="lazy">
+                    <img src="../img/work-dimensions--text-filter.png" class="lazyload">
                 </figure>
             </div>
             <div class="case-study--text-container">
@@ -124,7 +132,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
             <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-dimensions--number-filter.png" loading="lazy">
+                    <img src="../img/work-dimensions--number-filter.png" class="lazyload">
                 </figure>
             </div>
             <div class="case-study--text-container">
@@ -137,9 +145,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
             <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-dimensions--date-filter.png" loading="lazy">
+                    <img src="../img/work-dimensions--date-filter.png" class="lazyload">
                 </figure>
             </div>
+
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <!-- New segmeneting capabilities:
             <div class="case-study--text-container">
@@ -155,7 +165,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
              <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-explorer--exploration-space-2.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+                    <img src="../img/work-explorer--exploration-space-2.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                     <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
                 </figure>
             </div> -->
@@ -164,11 +174,9 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">New dimensions types:</h2>
-                    <p>Big open exploration space: A focus on the visualization that gives the user the breathing room to full capture every detail they need.
-                    </p>
-                    <p>Key Requirements:</p>
+                    <p>New types of dimensions to support:</p>
                      <ul style="margin-top: 1rem;">
-                        <li>Text dimension (already existed).</li>
+                        <li>Text dimensions (Already supported)</li>
                         <li>Numeric (discrete/continuous) dimensions.</li>
                         <li>Time (date/duration) dimensions.</li>
                     </ul>
@@ -176,21 +184,21 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
              <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-dimensions--dimension-type.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
-                    <figcaption>The Metric Homepage, provides a broad overview of the metric divded by different segments</figcaption>
+                    <img src="../img/work-dimensions--dimension-type.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
+
+            <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
+
             <!-- metric capabilities -->
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">General metric capabilities:</h2>
-                    <p>Allow users to define metric preset filters or set default filters and segments to deliver the metrics needed by business users. Additionally, provide an option to hide dimensions that are unnecessary or could cause issues if modified.
-                    </p>
                     <p>Key Requirements:</p>
                      <ul style="margin-top: 1rem;">
-                        <li>Preset Filters </li>
-                        <li>Default Filters </li>
-                        <li>Filter vs. Dimensions only choice </li>
+                        <li>Enable preset filters. </li>
+                        <li>Enable default filters.</li>
+                        <li>Enable dimensions capabilities.</li>
                     </ul>
                 </div>
             </div>
@@ -198,13 +206,13 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Preset Filters</h3>
-                    <p>The importance of a preset filter is it can be used to define a metric such as I have a dimension called "user events" that shows me "Churn", "Purchase" and "Extensions". So I only want this metric to show "Churn".</p>
+                    <p>The value of a preset filter lies in its ability to refine a metric. For example, if I have a dimension called 'user events' that includes members such as 'Churn,' 'Purchase,' and 'Extensions,' I can use a preset filter to display only 'Churn' to define the metric and for more focused analysis.</p>
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
-						<img src="../img/work-dimensions--preset-filters.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+					<img src="../img/work-dimensions--preset-filters.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
            
@@ -212,36 +220,37 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Dimensions capabilities</h3>
-                    <p>Ability to control if the dimensions would show up as a filter option, a segment option, or completely hidden from users.
+                    <p>Control whether a dimension appears as a filter, a segment, or is hidden from users entirely.
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
-						<img src="../img/work-dimensions--dimensions-capabilties.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+					<img src="../img/work-dimensions--dimensions-capabilties.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
             <div class="case-study--text-container">
                 <div>
                     <div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">General metric capabilities:</div>
                     <h3 style="margin-bottom: 1rem;">Default Filters</h3>
-                    <p>Default filter is a way to set the default way a metric is presented, but still allow the ability for that filter/sgement to be changed by the end user.
+                    <p>A default filter sets the initial presentation of a metric while still allowing the end user to modify the filter or segment as needed.
                     </p>
                 </div>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
                 <figure>
-						<img src="../img/work-dimensions--default-filter.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+					<img src="../img/work-dimensions--default-filter.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
+            
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
             <div class="case-study--background">
                 <h2>Key business and product outcomes</h2>
                 <div class="case-study--background-info-container">
                     <div>
                         <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-                            <li>80% of self-identified integrators have used the advanced filters and dimensions to set up their metrics.</li>
-                            <li>More requests to include further advanced features such as binning and grouping.</li>
+                            <li>80% of users self-identified as integrators have used the advanced filters and dimensions to set up their metrics.</li>
+                            <li>Increased customer requests to include further advanced features such as binning and grouping.</li>
                         </ul>
                     </div>
                 </div>
@@ -261,9 +270,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 </Layout>
 
 <style>
-	main {
-		background-color: #0e0e0e;
-	}
+	
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;

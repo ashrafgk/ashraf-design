@@ -34,11 +34,11 @@ const anim = {
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
-	<main>
+	<main style="background: #101010;">
 		<div style="position:relative; overflow-x: clip">
 			<PageHeader />
 	
-			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
+			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #101010 0%, #101010 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 				<section style="" class="bio-container">
 					<div style="" class="bio--header">
 						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">Hi, I am a designer who cares about creating beautiful experiences that people can find useful.</p>
@@ -58,10 +58,17 @@ const anim = {
 						<div style="width: auto; text-align: left;" >
 							<p style="line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #FF5558;">Leader:</span> As the head of design at Klipfolio, I guide a diverse team of designers, researchers, writers, and developers. Together, we shape our product vision and roadmap, making sure we’re always moving forward—preferably with a coffee in hand!</p>
 						</div>
+
+						<div style="width: auto; text-align: left;" >
+							<p style="line-height: 1.5;font-size: 24px;">Want to know more? 
+								<a href="../ashraf-khattab-resume-2024.pdf" style="display: inline-flex;align-items: center;" class="resume-link"><span style="margin-right: 0.5rem;">Read my resume</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow"><path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#fff"/></svg></a>
+							</p>
+							<p style="line-height: 1.5; font-size: 24px">Or let's grab coffee, get in touch with me on ashraf.gmk@gmail.com</p>
+						</div>
 					</div>
 				</section>
 			</div>
-			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #0e0e0e 0%, #0e0e0e 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
+			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #101010 0%, #101010 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem;">
 					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
 						<h2 style="font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
@@ -155,7 +162,7 @@ const anim = {
     }
 
 	main {
-		background-color: #0e0e0e;
+		background-color: #101010;
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -251,6 +258,18 @@ const anim = {
 		gap: 3rem; 
 		margin-block-end: 2rem; 
 		padding: 0 2rem;
+	}
+
+	.resume-link:hover {
+		
+			.arrow {
+				transform: translateX(5px);
+			}
+		
+	}
+	.arrow {
+		transform: translateX(0px);
+		transition: transform 0.25s ease;
 	}
 	
 	/* work */

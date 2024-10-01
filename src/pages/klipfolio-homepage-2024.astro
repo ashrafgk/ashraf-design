@@ -4,6 +4,13 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PorjectsFooter from '../components/ProjectsFooter.astro';
 
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -17,8 +24,8 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 					<p class="subheader-appear">A powerful tool designed for advanced analysis, offering seamless AI integration to simplify complex tasks and enhance overall ease of use.</p>
 				</div>
 				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
-					<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2024-hero" >
-						<img alt="ashraf" src="../img/klipfolio-homepage-2024-cover.png" loading="lazy"  style="border-radius: 2rem;" >
+					<figure class="work-cover" transition:name="homepage-2024-hero">
+						<Image src={Homepage2024Hero} alt="PmAssistHero Explorer" style="border-radius: 2rem;"  />
 					</figure>
 				</div>
 			
@@ -35,6 +42,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 							<div>
 								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Role</div>
 								<p>Project lead designer</p>
+								<p>Web Designer</p>
 							</div>
 							<div>
 								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Year</div>
@@ -46,7 +54,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 
 				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
 					<figure class="work-cover">
-						<img alt="ashraf" src="../img/klipfolio-homepage-2024.jpg" style="border-radius: 2rem;" class="vertical-reveal "/>
+						<img alt="ashraf" src="../img/klipfolio-homepage-2024.jpg" style="border-radius: 2rem;" class="vertical-reveal lazyload"/>
 					</figure>
 				</div>
 			
@@ -62,9 +70,7 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 </Layout>
 
 <style>
-	main {
-		background-color: #0e0e0e;
-	}
+	
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;

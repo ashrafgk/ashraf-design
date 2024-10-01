@@ -6,7 +6,12 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
 
 
 import { Image } from 'astro:assets';
-import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -19,15 +24,13 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
             <section class="case-study--header">
 				<div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
                     <h1 style="margin-bottom: 2rem;" class="header-appear">PowerMetrics Assistant</h1>
-                    <p class="subheader-appear">A contextual AI agent to help you through your PowerMetrics experience powered by our in-depth support documentations</p>
+                    <p class="subheader-appear">A contextual AI agent designed to enhance your PowerMetrics experience by providing relevant support documentation and answers to your questions.</p>
 				</div>
-				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero2">
-					<figure class="content video-container">
-						<video class="explorer-video" muted autoplay loop style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
-							<source src="../img/work-pm-ai--video.mp4">
-						</video> 
-					</figure>
-				</div>
+				<div class="case-study--full-container" style="margin-bottom: 5rem;">
+                    <figure class="work-cover" transition:name="pm-assistant-hero">
+                        <Image src={PmAssistHero} alt="PmAssistHero Explorer" style="border-radius: 2rem;"  />
+                    </figure>
+                </div>
 			
 			</section>
         <section class="case-study--body" style="">
@@ -41,8 +44,8 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                         </div>
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Role</h3>
-                            <p>Project lead</p>
-                            <p>Individual contributor</p>
+                            <p>Project Lead</p>
+								<p>UX/UI Designer</p>
                         </div>
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Year</h3>
@@ -55,7 +58,7 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <h2>Background</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>Users have not been utalizing our Support Website, with our support and success team getting more and more tickets answering questions that are otherwise available on the Support Website. </p>
+                        <p>Users are not fully utilizing our Support Website, leading to an increase in tickets for questions that could be answered through existing resources. </p>
                     </div>
                 </div>
             </div>
@@ -63,7 +66,7 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <h2>Opportunity</h2>
                 <div class="case-study--background-info-container" style="row-gap: 2rem;">
                     <div>
-                        <p>An AI agent that is uses our support website as a reference material to answer user questions</h4>
+                        <p>An AI agent that uses our Support Website as reference material to answer user questions, summarizing and extracting information from various articles to provide the best responses.</h4>
                     </div>
                 </div>
             </div>
@@ -71,15 +74,23 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <h2>Requirements</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>To build a useful AI agent it must be able to do the following:</p>
+                        <p>To create an effective AI agent, it must be able to:</p>
                         <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-                            <li>Less hellucination, use only the support website as referance material.</li>
-                            <li>Ability to bookmark questions/answer for future reference.</li>
-                            <li>Ability to dock the Agent for ease of use and allow for more space.</li>
-                            <li>Provide relative questions to where the user is in the product.</li>
+                            <li>Minimize hallucinations by using only the Support Website as reference material.</li>
+                            <li>Enable bookmarking of questions and answers for future reference.</li>
+                            <li>Allow the agent to be docked for ease of use and to maximize workspace.</li>
+                            <li>Offer relevant questions based on the user's current position in the product.</li>
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center" transition:name="hero2">
+                <figure class="content video-container">
+                    <video class="explorer-video" muted autoplay loop style="width: 1200px; max-width: 100%; margin: auto ;border-radius: 1rem; overflow: hidden;" transition:name="pm-ai" transition:persist>
+                        <source src="../img/work-pm-ai--video.mp4">
+                    </video> 
+                </figure>
             </div>
 
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
@@ -87,11 +98,17 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
             <div class="case-study--text-container">
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Ask away</h2>
                 <p>A simple chatbot UI to ask questions and get answers quickly.</p>
+                <p>Every answers uses our Support Website as reference material, summarizing and extracting information from various articles to provide the best response.</p>
             </div>
 
 			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-						<img src="../img/work-pm-assistant--question-answer.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+					<img src="../img/work-pm-assistant--question-answer.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
+                </figure>
+            </div>
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-pm-assistant--answer.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
            
@@ -100,28 +117,35 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">Contextual help</h2>
-                    <p>Relative questions to where the user is in the product.</p>
+                    <p>Relevant questions based on the user's current position in the product</p>
                 </div>
             </div>
 
-			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <Image src={ImgContextual} alt="descriptive text" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" />
+                    <img src="../img/work-pm-assistant--contextual-articles.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
-
+           
+			<div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-pm-assistant--contextual-questions.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
+                </figure>
+                
+            </div>
+           
             <div style="height: 3px; width: 300px; background: #555; position: relative; margin: 5rem auto;"></div>
 
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">Put it on the side</h2>
-                    <p>Dock the Agent for ease of use and allow for more space.</p>
+                    <p>Dock the Agent for ease of use and to maximize workspace.</p>
                 </div>
             </div>
 
 			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-						<img src="../img/work-pm-assistant--sidebar.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+						<img src="../img/work-pm-assistant--sidebar.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
@@ -130,13 +154,12 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
             <div class="case-study--text-container">
                 <div>
                     <h2 style="margin-bottom: 1rem;">Save it for later</h2>
-                    <p>Bookmark your questions/answers for future reference.
-                    </p>
+                    <p>Bookmark your questions/answers for future reference.</p>
                 </div>
             </div>
 			 <div class="case-study--large-container" style="margin-bottom: 3rem;">
                 <figure>
-						<img src="../img/work-pm-assistant--bookmark.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" loading="lazy">
+					<img src="../img/work-pm-assistant--bookmark.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
@@ -147,9 +170,9 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
                 <div class="case-study--background-info-container">
                     <div>
                         <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-                            <li>24% decrease in users tickets.</li>
-                            <li>60% decrease of tickets requesting help in very simple tasks. </li>
-                            <li>Ability to see and understand what users are struggling with in the app and/or if the documentation aren't sufficient and can be improved.</li>
+                            <li>24% reduction in user tickets.</li>
+                            <li>60% decrease in tickets related to basic tasks.</li>
+                            <li>Improved visibility into user struggles within the app, identifying gaps in documentation for further enhancement.</li>
                         </ul>
                     </div>
                 </div>
@@ -164,9 +187,7 @@ import ImgContextual from '../assets/work-pm-assistant--contextual-questions.png
 	</main>
 </Layout>
 <style>
-	main {
-		background-color: #0e0e0e;
-	}
+	
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;

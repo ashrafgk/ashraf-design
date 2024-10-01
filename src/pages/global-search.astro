@@ -4,6 +4,13 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PorjectsFooter from '../components/ProjectsFooter.astro';
 
+import { Image } from 'astro:assets';
+import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import DimensionsHero from '../assets/work-dimensions-2--cover.png';
+import PmAssistHero from '../assets/work-pm-assistant--cover.png';
+import GlobalSearchHero from '../assets/work-global-search--cover.png';
+import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
+import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 ---
 
 <Layout title="Ashraf Khattab Portfolio">
@@ -17,8 +24,8 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 <p>A search mechanism within PowerMetrics that helps users locate various assets and settings/pages.</p>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
-                <figure class="work-cover" transition:name="dimnesions-hero">
-                    <img alt="ashraf" src="../img/work-global-search--cover.png"  style="border-radius: 2rem;"  />
+                <figure class="work-cover" transition:name="global-search-hero">
+                    <Image src={GlobalSearchHero} alt="PmAssistHero Explorer" style="border-radius: 2rem;"  />
                 </figure>
             </div>
            
@@ -34,8 +41,8 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                         </div>
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Role</h3>
-                            <p>Project UX lead</p>
-                            <p>Individual contributor</p>
+                            <p>Project Lead</p>
+								<p>UX/UI Designer</p>
                         </div>
                         <div>
                             <h3 style="font-weight: bold; margin-bottom: 16px; color: #999">Year</h3>
@@ -72,9 +79,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Zero state</h2>
             </div>
 
-             <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
-                    <img src="../img/work-global-search--zero-state.svg" loading="lazy">
+             
+
+            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-global-search--zero-state.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
@@ -83,10 +92,11 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             <div class="case-study--text-container">
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Search state</h2>
             </div>
-            
+        
+
             <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
-                    <img src="../img/work-global-search--search-state.svg" loading="lazy">
+                <figure>
+                    <img src="../img/work-global-search--search-state.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
@@ -97,8 +107,8 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
             </div>
 
             <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
-                    <img src="../img/work-global-search--categories.svg" loading="lazy">
+                <figure>
+                    <img src="../img/work-global-search--categories.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
@@ -108,9 +118,10 @@ import PorjectsFooter from '../components/ProjectsFooter.astro';
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Result preview</h2>
             </div>
 
+
             <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure style="background-color: #FFA39B;height: 60vh;max-height: 680px;border-radius: 2rem;display: flex;align-items: center;justify-content: center;">
-                    <img src="../img/work-global-search--result-preview.svg" loading="lazy">
+                <figure>
+                    <img src="../img/work-global-search--result-preview.png" style="width: 1200px; margin: 0rem auto 1rem; border-radius: 2rem; overflow: hidden;" class="lazyload">
                 </figure>
             </div>
 
