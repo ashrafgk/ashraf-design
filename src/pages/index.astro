@@ -38,7 +38,7 @@ const anim = {
 		<div style="position:relative; overflow-x: clip">
 			<PageHeader />
 	
-			<div style="padding: 15rem 0 0; background: linear-gradient(0deg, #101010 0%, #101010 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
+			<div style="padding: 10rem 0 0; background: linear-gradient(0deg, #101010 0%, #101010 90%, transparent 100%); position: relative; z-index: 20;opacity: 1;">
 				<section style="" class="bio-container">
 					<div style="" class="bio--header">
 						<p style="margin-block-end: 1rem;line-height: 1.35; font-size: 48px; font-weight: 600; text-align: left; margin-bottom: 3rem;">Hi, I am a multidisciplinary designer who cares about creating beautiful experiences that people can find useful.</p>
@@ -47,16 +47,16 @@ const anim = {
 					</div>
 					<div style=""  class="bio--roles">
 						<div style="max-width: auto; text-align: left;" >
-							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #7D6743;">Product Designer:</span> I contribute to the creation and building of the product that empower users to connect with their data, and make informed decisions. I love finding the sweet spot between aesthetics and functionality.</p>
+							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #555;">Product Designer:</span> I contribute to the creation and building of the product that empower users to connect with their data, and make informed decisions. I love finding the sweet spot between aesthetics and functionality.</p>
 						</div>
 						<div style="width: auto; text-align: left;" >
-							<p style="line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #7D6743;">Front-end developer:</span> I’m always looking for opportunities to bridge the gap between design and code, ensuring that what’s envisioned is what’s delivered.</p>
+							<p style="line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #555;">Front-end developer:</span> I’m always looking for opportunities to bridge the gap between design and code, ensuring that what’s envisioned is what’s delivered.</p>
 						</div>
 						<div style="width: auto; text-align: left;" >
-							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #7D6743;">Mentor:</span> Whether it's advising startups or mentoring junior designers inside and outside of Klipfolio, I’m passionate about helping others refine their skills and find their own design voice.</p>
+							<p style="margin-block-end: 1rem;line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #555;">Mentor:</span> Whether it's advising startups or mentoring junior designers inside and outside of Klipfolio, I’m passionate about helping others refine their skills and find their own design voice.</p>
 						</div>
 						<div style="width: auto; text-align: left;" >
-							<p style="line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #7D6743;">Leader:</span> As the Director of Design at Klipfolio, I guide a diverse team of designers, researchers, writers, and developers. Together, we shape our product vision and roadmap, making sure we’re always moving forward—preferably with a coffee in hand!</p>
+							<p style="line-height: 1.5; font-size: 24px"><span style="font-weight: bold; color: #555;">Leader:</span> As the Director of Design at Klipfolio, I guide a diverse team of designers, researchers, writers, and developers. Together, we shape our product vision and roadmap, making sure we’re always moving forward—preferably with a coffee in hand!</p>
 						</div>
 
 						<div style="width: auto; text-align: left;" >
@@ -68,7 +68,7 @@ const anim = {
 					</div>
 				</section>
 			</div>
-			<div style="padding: 5rem 0 0; background: #101010; position: relative; z-index: 20;opacity: 1;">
+			<div class="case-studies-gallery" style="padding: 5rem 0 0; background: #101010; position: relative; z-index: 20;opacity: 1;">
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem;">
 					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
 						<h2 style="font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
@@ -165,35 +165,6 @@ const anim = {
 		background-color: #101010;
 	}
 
-	@media (prefers-reduced-motion: no-preference) {
-		@supports (animation-timeline: scroll()) {
-			#pattern-move-1 {
-				transform-origin: 50% 50%;
-				animation: move-down forwards ease-in-out;
-				animation-timeline: scroll(block nearest);
-				animation-range: exit-crossing 0% exit-crossing 50%;
-			}
-			#pattern-move-2 {
-				transform-origin: 50% 50%;
-				animation: move-down forwards ease-in-out;
-				animation-timeline: scroll(block nearest);
-				animation-range: exit-crossing 0% exit-crossing 50%;
-			}
-			/* .subheader-appear {
-				transform-origin: 50% 50%;
-				animation: subheader-animation linear;
-				animation-timeline: scroll(block nearest);
-				animation-range: exit-crossing 0% exit-crossing 25%;
-			} */
-			.header-container {
-				transform-origin: 50% 50%;
-				animation: text-blur-progress forwards ease-in-out;
-				animation-timeline: scroll(block nearest);
-				animation-range: exit-crossing 0% exit-crossing 40%;
-			}
-		}
-	}
-
 	@keyframes move-down {
 		0% {
 			transform: translateY(00px);
@@ -204,17 +175,25 @@ const anim = {
 		}
 	}
 
-	
+	/* work */
+	@keyframes revealing {
+		from {
+			opacity: 0;
+			filter: blur(2px);
+		}
+		to {
+			opacity: 1;
+			filter: blur(0px);
+		}
+	}
 
 	@keyframes text-reveal {
 		from {
 			opacity: 0;
-			/* clip-path: inset(100% 0% 100% 0%); */
 			filter: blur(5px);
 		}
 		to {
 			opacity: 1;
-			/* clip-path: inset(0% 0% 0% 0%); */
 			filter: blur(0px);
 		}
 	}
@@ -272,14 +251,29 @@ const anim = {
 		transition: transform 0.25s ease;
 	}
 	
-	/* work */
+	
 	.work-cover-container {
 		margin-bottom: 10rem;
-
+		
 	}
+	
 
 	.work-cover {
 		background-size: cover; margin-block-end: 1rem; border-radius: 2rem; overflow: hidden;
+			margin: 0rem auto 1rem;
+			border-radius: 2rem;
+			overflow: hidden;
+		
+			/* Create View Timeline */
+			view-timeline-name: --revealing-image;
+			view-timeline-axis: block;
+
+			/* Attach animation, linked to the  View Timeline */
+			animation: ease-in-out revealing both;
+			animation-timeline: --revealing-image;
+
+			/* Tweak range when effect should run*/
+			animation-range: entry 25% cover 50%;
 	}
 
 	.work-img {
