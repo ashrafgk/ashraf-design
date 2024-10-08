@@ -100,6 +100,13 @@
 					document.body.addEventListener('click', START, { once: true })
 			
 				</script>
+
+				<div class="scroll-cta-container" style="">
+					<div class="scroll-cta">
+					Scroll
+					<div style="width: 1px;height: 30px;background: #555;content:'';display: block;margin-top: 4px;" data-astro-cid-wu5dj4rx=""></div> 
+					</div>
+				</div>
 			
 			</div>
 		</div>
@@ -115,10 +122,10 @@
 	
 	@keyframes shadow-progress {
 		from {
-			filter: drop-shadow(0px 10px 10px rgba(0,0,0,0));
+			filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
 		}
 		to {
-			filter: drop-shadow(0px 60px 50px rgba(0,0,0,0.95));
+			filter: drop-shadow(0px 60px 60px rgba(0,0,0,0.95));
 		}
 	}
 	
@@ -131,13 +138,32 @@
 			opacity: 1;
 		}
 	}
+	.scroll-cta-container {
+		position: fixed;bottom: 110px;z-index: 910;text-align: center;display: flex;justify-content: center;flex-direction: column;align-items: center;left: 0;right: 0;margin: auto; 
+
+		animation: text-blur-progress forwards ease-in-out;
+		animation-timeline: scroll(block nearest);
+		animation-range: exit-crossing 0% exit-crossing 40%;
+	}
+	.scroll-cta {
+		display: flex;justify-content: center;flex-direction: column;align-items: center;
+		opacity: 0;
+		animation: header-image-blinde-animation linear alternate 6;
+		animation-duration: 2.5s;
+		animation-delay: 14s;
+	}
 	.header-image-container {
 		animation: header-image-blinde-animation linear forwards;
-		animation-duration: 3.5s;
+		animation-duration: 2.5s;
 		animation-delay: 1s;
 		margin: auto;
 		grid-area: cover;
 		opacity: 0;
+	}
+	
+	@keyframes scale-up {
+		from {     transform: scale3d(1, 1, 1);opacity: 1; }
+		to {     transform: scale3d(14, 14, 14);opacity: 1; }
 	}
 	@keyframes scale-up {
 		from {
@@ -237,9 +263,9 @@
 				position: sticky;
 				z-index: 1;
 				top: 0;right: 0;bottom: 0;left: 0;
-				height: 200vh;
-				animation: header-bg-animation ease-in-out forwards;
-				animation-duration: 4.5s;
+				height: 160vh;
+				animation: header-bg-animation ease forwards;
+				animation-duration: 5s;
 				animation-delay: 4s;
 			}
 			#progress {
@@ -273,8 +299,8 @@
 			}
 			.homepage-container {
 				animation: shadow-progress ease-in-out forwards;
-				animation-duration: 3s;
-				animation-delay: 4s;
+				animation-duration: 2.5s;
+				animation-delay: 4.5s;
 			}
 		}
 	}
@@ -292,8 +318,8 @@
 		margin: auto;
 		grid-area: cover;
 		opacity: 0;
-		animation: header-animation linear forwards;
-		animation-duration: 2s;
+		animation: header-animation ease-in-out forwards;
+		animation-duration: 3s;
 		animation-delay: 2s;
 	}
 	
