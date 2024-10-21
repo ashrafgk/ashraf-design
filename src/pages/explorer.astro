@@ -110,9 +110,9 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 							<p>We developed the Metric Explorer, a flexible environment that allows users to explore and analyze data in depth. By incorporating AI and leveraging advanced models, we created an intuitive solution that caters to all skill levels, enabling users to ask questions and gain actionable insights. Key components of this feature include:</p>
 							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
 								<li>1. Visualization Canvas</li>
-								<li>2. Advanced Analysis Tools</li>
+								<li>2. Analysis Tools</li>
 								<li>3. Exploration Sidebar</li>
-								<li>4. Generative AI</li>
+								<li>4. AI Assistant</li>
 							</ul>
 						</div>
 					</div>
@@ -167,26 +167,27 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 
 				<div class="case-study--text-container">
 					<div>
-						<div style="margin-bottom: 1rem; position: relative;"><span class="number">2</span><h3 style="position: relative;">Advanced Analysis</h3></div>
+						<div style="margin-bottom: 1rem; position: relative;"><span class="number">2</span><h3 style="position: relative;">Analysis tools</h3></div>
 						<p>Effective decision-making starts with understanding both current performance and future projections of your key business metrics.
 						</p>
 						<p>Tools like normal range and forecast analysis enable you to assess past, present, and future trends. Quickly identify outliers and predict future performance with ease.</p>
 						<p>Analysis Types:</p>
 						<ul style="margin-top: 1rem;">
-							<li>Linear Trend </li>
-							<li>Future Forecast </li>
-							<li>Moving Average </li>
-							<li>Normal Range </li>
+							<li><strong>Future Forecast:</strong> Predicts future performance based on past data trends within a specified time period. </li>
+							<li><strong>Normal Range:</strong> Displays expected value ranges by analyzing natural variations in past data.</li>
+							<li><strong>Linear Trend:</strong> Clearly shows the trend’s direction with a positive or negative slope.</li>
+							<li><strong>Moving Average:</strong> Smooths out fluctuations to highlight the average trend line in your data.</li>
+							
 						</ul>
 					</div>
 				</div>
 				<div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
 					<div class="scrollsnap">
 						<div class="item-container">
-							<figure style="display: flex; flex-direction: column;"><img src="../img/work-explorer--advanced-analysis-1.png" class="lazyload"><figcaption><strong>Advanced Analysis:</strong> A set of tools that help you assess past, current, and future trends in your metrics.</figcaption></figure>
-							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-2.png" class="lazyload"><figcaption><strong>Advanced Analysis:</strong> A set of tools that help you assess past, current, and future trends in your metrics.</figcaption></figure>
-							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-3.png" class="lazyload"><figcaption><strong>Advanced Analysis:</strong> A set of tools that help you assess past, current, and future trends in your metrics.</figcaption></figure>
-							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-4.png" class="lazyload"><figcaption><strong>Advanced Analysis:</strong> A set of tools that help you assess past, current, and future trends in your metrics.</figcaption></figure>
+							<figure style="display: flex; flex-direction: column;"><img src="../img/work-explorer--advanced-analysis-1.png" class="lazyload"></figure>
+							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-2.png" class="lazyload"></figure>
+							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-3.png" class="lazyload"></figure>
+							<figure style="display: flex; flex-direction: column"><img src="../img/work-explorer--advanced-analysis-4.png" class="lazyload"></figure>
 						</div>
 					</div>
 				</div>
@@ -214,8 +215,9 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 						<figcaption>Exploration sidebar: Control center for fine-tuning your visualizations and uncovering the insights you need.</figcaption>
 					</figure>
 				</div>
-				<div class="case-study--full-container" style="margin-bottom: 3rem;">
-					<figure style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem">
+				<div class="case-study--full-container" style="margin-bottom: 3rem; position: relative; container-type: inline-size;">
+					
+					<figure class="grid-container">
 						<img src="../img/work-explorer--sidebar-1.png" style="border-radius: 1.25rem;" class="lazyload">
 						<img src="../img/work-explorer--sidebar-2.png" style="border-radius: 1.25rem;" class="lazyload">
 						<img src="../img/work-explorer--sidebar-3.png" style="border-radius: 1.25rem;" class="lazyload">
@@ -226,7 +228,7 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 
 				<div class="case-study--text-container">
 					<div>
-						<div style="margin-bottom: 1rem; position: relative;"><span class="number">4</span><h3 style="position: relative;">Generative AI</h3></div>
+						<div style="margin-bottom: 1rem; position: relative;"><span class="number">4</span><h3 style="position: relative;">AI Assistant</h3></div>
 						<p>Metrics are critical tools for driving outcomes by providing essential context. When paired with natural language processing, generative AI powered by metrics becomes a valuable asset for business users. Our focus is on integrating generative AI into metric interactions to enhance decision-making and provide actionable insights.</p>
 						<p>We’re starting with a targeted AI application that minimizes hallucinations, ensuring users can trust both the data and the insights generated. Building and maintaining this trust is essential as we roll out AI-driven solutions.</p>
 						<p>Key Requirements:</p>
@@ -419,7 +421,7 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 		display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap:2rem;
 	}
 
-	@container (max-width: 992px) {
+	@container (max-width: 1080px) {
 		.grid-container {
 			grid-template-columns: auto;
 		}
@@ -454,17 +456,23 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 			grid-auto-flow: column;
 			width: -moz-fit-content;
 			width: fit-content;
-			padding: 0 10rem;
+			padding: 0 5vw;
+			
 			list-style-type: none;
 		}
 		figure {
 			display: flex;
-			width: min(max(87.5vw - 0px, 280px), 1680px);
+			width: min(max(75.5vw - 0px,280px),1580px);
 			scroll-snap-align: center;
     		list-style-type: none;
 			max-width: none;
 		}
 	}
+
+	@media only screen and (max-width: 992px) { 
+		.scrollsnap { .item-container { padding: 0 calc(5vw - 2rem); } }
+	}
+
 	
 	h1 {
 		font-size: 4rem;
