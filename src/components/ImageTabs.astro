@@ -1,0 +1,199 @@
+---
+export interface TabData {
+  id: string;
+  label: string;
+  imageUrl: string;
+}
+
+interface Props {
+  sectionId: string;
+  tabsData: TabData[];
+}
+
+const { sectionId, tabsData } = Astro.props;
+---
+
+<div class="image-tabs" data-section-id={sectionId}>
+  <div class="image-tabs__content">
+    
+    <div class="image-tabs__images">
+      {tabsData.map((tab, index) => (
+        <div
+          id={`${sectionId}-${tab.id}-panel`}
+          class={`image-tabs__panel ${index === 0 ? 'active' : ''}`}
+          role="tabpanel"
+          aria-labelledby={`${sectionId}-${tab.id}-tab`}
+          data-image={`${sectionId}-${tab.id}`}
+        >
+          <img
+            src={tab.imageUrl}
+            alt={`Image for ${tab.label}`}
+            class="image-tabs__image"
+          />
+        </div>
+      ))}
+    </div>
+    <div class="image-tabs__buttons" role="tablist">
+      {tabsData.map((tab, index) => (
+        <button
+          id={`${sectionId}-${tab.id}-tab`}
+          class={`image-tabs__button ${index === 0 ? 'active' : ''}`}
+          role="tab"
+          aria-selected={index === 0 ? 'true' : 'false'}
+          aria-controls={`${sectionId}-${tab.id}-panel`}
+          data-tab={`${sectionId}-${tab.id}`}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .image-tabs {
+    width: 100%;
+    max-width: 50vw;
+    margin: 0 auto;
+   
+    overflow: hidden;
+  }
+
+  .image-tabs__content {
+    padding: 1.5rem;
+  }
+
+  .image-tabs__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-tabs__button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .image-tabs__button:hover {
+    background-color: #e5e7eb;
+  }
+
+  .image-tabs__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6;
+  }
+
+  .image-tabs__button.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .image-tabs__images {
+    position: relative;
+    aspect-ratio: 16 / 8.5;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #e1e1e1;
+    border-radius: 2rem;
+  }
+
+  .image-tabs__panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    padding: 2rem;
+  }
+
+  .image-tabs__panel.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .image-tabs__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0px 20px 40px 0px #444;
+  }
+</style>
+
+<script>
+  function setupTabs() {
+    document.querySelectorAll('.image-tabs').forEach(tabsContainer => {
+      const sectionId = tabsContainer.getAttribute('data-section-id');
+      const tablist = tabsContainer.querySelector('.image-tabs__buttons[role="tablist"]');
+      const tabs = tabsContainer.querySelectorAll('.image-tabs__button[role="tab"]');
+      const panels = tabsContainer.querySelectorAll('.image-tabs__panel[role="tabpanel"]');
+
+      function setActiveTab(tabId) {
+        tabs.forEach(tab => {
+          const isActive = tab.getAttribute('data-tab') === tabId;
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          tab.classList.toggle('active', isActive);
+        });
+
+        panels.forEach(panel => {
+          const isActive = panel.getAttribute('data-image') === tabId;
+          panel.classList.toggle('active', isActive);
+        });
+      }
+
+      tablist.addEventListener('click', (e) => {
+        const tab = e.target.closest('[role="tab"]');
+        if (tab) {
+          const tabId = tab.getAttribute('data-tab');
+          setActiveTab(tabId);
+        }
+      });
+
+      // Keyboard navigation
+      tablist.addEventListener('keydown', (e) => {
+        const tab = e.target.closest('[role="tab"]');
+        if (tab) {
+          const tabsArray = Array.from(tabs);
+          const index = tabsArray.indexOf(tab);
+          let newTab;
+
+          switch (e.key) {
+            case 'ArrowLeft':
+            case 'ArrowUp':
+              newTab = tabsArray[index - 1] || tabsArray[tabsArray.length - 1];
+              break;
+            case 'ArrowRight':
+            case 'ArrowDown':
+              newTab = tabsArray[index + 1] || tabsArray[0];
+              break;
+            case 'Home':
+              newTab = tabsArray[0];
+              break;
+            case 'End':
+              newTab = tabsArray[tabsArray.length - 1];
+              break;
+            default:
+              return;
+          }
+
+          e.preventDefault();
+          newTab.focus();
+          newTab.click();
+        }
+      });
+    });
+  }
+
+  // Run the setup when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', setupTabs);
+</script>
