@@ -68,10 +68,10 @@ const anim = {
 					</div>
 				</section>
 			</div>
-			<div class="case-studies-gallery" style="padding: 5rem 0 0; background: #101010; position: relative; z-index: 20;opacity: 1;" id="work">
+			<div class="case-studies-gallery" style="padding: 5rem 0 0; background: #e0e0e0; position: relative; z-index: 20;opacity: 1;" id="work">
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem;">
 					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
-						<h2 style="font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
+						<h2 style="color: #333; font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
 						<p style="color: #999;font-weight: 500;">Projects that have had impact</p>
 					</div>
 					<div style=" max-width: 1200px; margin: auto; padding: 0 2rem;">
@@ -81,7 +81,7 @@ const anim = {
 									<Image src={ExplorerHero} alt="Metric Explorer" />
 								</figure>
 							</a>
-							<a href="explorer.html" class="work-title">Metric Explorer (2024)</a>
+							<a href="explorer.html" class="work-title" style="color: #333;">Metric Explorer (2024)</a>
 						</div>
 						<!-- <div class="work-cover-container" transition:name="ds">
 							<a href="/design-system-revamp"> 
@@ -97,7 +97,7 @@ const anim = {
 									<Image src={DimensionsHero} alt="DimensionsHero Explorer" />
 								</figure>
 							</a>
-							<a href="/dimensions-2" class="work-title">Dimensions 2.0 (2024)</a>
+							<a href="/dimensions-2" class="work-title" style="color: #333;">Dimensions 2.0 (2024)</a>
 						</div>
 						<div class="work-cover-container">
 							<a href="/pm-assistant"> 
@@ -108,7 +108,7 @@ const anim = {
 									</video>  -->
 								</figure>
 							</a>
-							<a href="/pm-assistant" class="work-title">PowerMetrics Assistant (2023)</a>
+							<a href="/pm-assistant" class="work-title" style="color: #333;">PowerMetrics Assistant (2023)</a>
 						</div>
 						 <div class="work-cover-container">
 							<a href="/global-search"> 
@@ -116,13 +116,13 @@ const anim = {
 									<Image src={GlobalSearchHero} alt="GlobalSearchHero Explorer" />
 								</figure>
 							</a>
-							<a href="/global-search" class="work-title">Assets Global Search (2023)</a>
+							<a href="/global-search" class="work-title" style="color: #333;">Assets Global Search (2023)</a>
 						</div>
 					</div>
 				</section>
-				<section style="position: relative; background: #101010; z-index: 20; align-items: center;justify-content: center;">
+				<section style="position: relative; background: #e0e0e0; z-index: 20; align-items: center;justify-content: center;">
 					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
-						<h2 style="font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Other projects</h2>
+						<h2 style="color: #333;font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Other projects</h2>
 						<p style="color: #999;font-weight: 500;">Bridging the gap between marketing communication and product experience</p>
 					</div>
 					<div style="max-width: 1200px; margin: auto; padding: 0 2rem;">
@@ -133,7 +133,7 @@ const anim = {
 										<Image src={Homepage2024Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
-								<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.75rem;">Klipfolio Homepage (2024)</a>
+								<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.75rem;color: #333;">Klipfolio Homepage (2024)</a>
 							</div>
 							<div class="work-cover-container">
 								<a href="/klipfolio-homepage-2023"> 
@@ -141,7 +141,7 @@ const anim = {
 										<Image src={Homepage2023Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
-								<a href="/klipfolio-homepage-2023" class="work-title" style="font-size: 1.75rem;">Klipfolio Homepage (2023)</a>
+								<a href="/klipfolio-homepage-2023" class="work-title" style="font-size: 1.75rem;color: #333;">Klipfolio Homepage (2023)</a>
 							</div>
 							
 						
@@ -181,12 +181,10 @@ const anim = {
 	/* work */
 	@keyframes revealing {
 		from {
-			opacity: 0;
-			filter: blur(2px);
+			box-shadow: 0px 0px 1px rgba(0,0,0,0.05);
 		}
 		to {
-			opacity: 1;
-			filter: blur(0px);
+			box-shadow: 0px 90px 90px rgba(0,0,0,0.65);
 		}
 	}
 
@@ -262,21 +260,24 @@ const anim = {
 	
 
 	.work-cover {
-		background-size: cover; margin-block-end: 1rem; border-radius: 2rem; overflow: hidden;
-			margin: 0rem auto 1rem;
-			border-radius: 2rem;
-			overflow: hidden;
-		
-			/* Create View Timeline */
-			view-timeline-name: --revealing-image;
-			view-timeline-axis: block;
+		box-sizing: border-box;
+		background-size: cover; 
+		margin: 0rem auto 2rem;
+		border-radius: 2rem;
+		overflow: hidden;
+		border: 10px solid #101010;
+		box-shadow: 0px 90px 90px rgba(0,0,0,0.65);
+	
+		/* Create View Timeline */
+		view-timeline-name: --revealing-image;
+		view-timeline-axis: block;
 
-			/* Attach animation, linked to the  View Timeline */
-			animation: ease-in-out revealing both;
-			animation-timeline: --revealing-image;
+		/* Attach animation, linked to the  View Timeline */
+		animation: ease-in-out revealing both;
+		animation-timeline: --revealing-image;
 
-			/* Tweak range when effect should run*/
-			animation-range: entry 25% cover 50%;
+		/* Tweak range when effect should run*/
+		animation-range: entry 60% cover 60%;
 	}
 
 	.work-img {
@@ -291,6 +292,7 @@ const anim = {
 	.work-title {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0.4rem;
 		font-size: 2rem;
 		font-weight: bold;
