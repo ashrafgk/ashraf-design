@@ -71,33 +71,33 @@
 					window.addEventListener('pointermove', UPDATE)
 			
 			
-					// Want to handle device orientation too
+					// // Want to handle device orientation too
 			
-					const handleOrientation = ({ beta, gamma }) => {
-					const isLandscape = window.matchMedia('(orientation: landscape)').matches
-					gsap.set(document.documentElement, {
-						'--x': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(-45, 45, -1, 1, beta) : gsap.utils.mapRange(-45, 45, -1, 1, gamma)),
-						'--y': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(20, 70, 1, -1, Math.abs(gamma)) : gsap.utils.mapRange(20, 70, 1, -1, beta)),
-					})
-					}
+					// const handleOrientation = ({ beta, gamma }) => {
+					// const isLandscape = window.matchMedia('(orientation: landscape)').matches
+					// gsap.set(document.documentElement, {
+					// 	'--x': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(-45, 45, -1, 1, beta) : gsap.utils.mapRange(-45, 45, -1, 1, gamma)),
+					// 	'--y': gsap.utils.clamp(-1, 1, isLandscape ? gsap.utils.mapRange(20, 70, 1, -1, Math.abs(gamma)) : gsap.utils.mapRange(20, 70, 1, -1, beta)),
+					// })
+					// }
 			
-					const START = () => {
+					// const START = () => {
 					// if (BUTTON) BUTTON.remove();
-					if (
-						DeviceOrientationEvent?.requestPermission
-					) {
-						Promise.all([
-						DeviceOrientationEvent.requestPermission(),
-						]).then((results) => {
-						if (results.every((result) => result === "granted")) {
-							window.addEventListener("deviceorientation", handleOrientation);
-						}
-						});
-					} else {
-						window.addEventListener("deviceorientation", handleOrientation);
-					}
-					};
-					document.body.addEventListener('click', START, { once: true })
+					// if (
+					// 	DeviceOrientationEvent?.requestPermission
+					// ) {
+					// 	Promise.all([
+					// 	DeviceOrientationEvent.requestPermission(),
+					// 	]).then((results) => {
+					// 	if (results.every((result) => result === "granted")) {
+					// 		window.addEventListener("deviceorientation", handleOrientation);
+					// 	}
+					// 	});
+					// } else {
+					// 	window.addEventListener("deviceorientation", handleOrientation);
+					// }
+					// };
+					// document.body.addEventListener('click', START, { once: true })
 			
 				</script>
 
