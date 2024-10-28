@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import Footer from '../components/Footer.astro';
 
 import { Image } from 'astro:assets';
-import ExplorerHero from '../assets/work-explorer--cover-2.png';
+import ExplorerHero from '../assets/work-explorer--cover-3.png';
 import DimensionsHero from '../assets/work-dimensions-2--cover.png';
 import PmAssistHero from '../assets/work-pm-assistant--cover.png';
 import GlobalSearchHero from '../assets/work-global-search--cover.png';
@@ -69,12 +69,15 @@ const anim = {
 				</section>
 			</div>
 			<div class="case-studies-gallery" style="padding: 5rem 0 0; background: #e0e0e0; position: relative; z-index: 20;opacity: 1;" id="work">
-				<section style="position: relative; z-index: 20; align-items: center;justify-content: center; margin-bottom: 5rem;">
-					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
-						<h2 style="color: #333; font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
-						<p style="color: #999;font-weight: 500;">Projects that have had impact</p>
+				<!-- Case Studies -->
+				<section style="position: relative; z-index: 20; align-items: center;justify-content: center;">
+					<div class="work-cover--title-container" style="position: sticky;top: 0;">
+						<div style="max-width: 800px; margin: auto;text-align: center;" class="project-headers">
+							<h2 style="color: #333; font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
+							<p style="color: #999;font-weight: 500;">Projects that have had impact</p>
+						</div>
 					</div>
-					<div style=" max-width: 1200px; margin: auto; padding: 0 2rem;">
+					<div class="work-cover--outer-container">
 						 <div class="work-cover-container">
 							<a href="/explorer"> 
 								<figure class="work-cover" transition:name="explorer-hero">
@@ -83,14 +86,6 @@ const anim = {
 							</a>
 							<a href="explorer.html" class="work-title" style="color: #333;">Metric Explorer (2024)</a>
 						</div>
-						<!-- <div class="work-cover-container" transition:name="ds">
-							<a href="/design-system-revamp"> 
-								<figure style="" class="work-cover">
-									<img alt="ashraf" src="../img/work-design-system--cover.png" class="" />
-								</figure>
-							</a>
-							<a href="/design-system-revamp" class="work-title">Design system: Dark mode (2024)<span class="works-tag">Design system</span><span class="works-tag">Dark mode</span></a>
-						</div> -->
 						<div class="work-cover-container">
 							<a href="/dimensions-2"> 
 								<figure style="" class="work-cover" transition:name="dimnesions-hero">
@@ -98,6 +93,14 @@ const anim = {
 								</figure>
 							</a>
 							<a href="/dimensions-2" class="work-title" style="color: #333;">Dimensions 2.0 (2024)</a>
+						</div>
+						<div class="work-cover-container">
+							<a href="/global-search"> 
+								<figure style="" class="work-cover" transition:name="global-searach-hero">
+									<Image src={GlobalSearchHero} alt="GlobalSearchHero Explorer" />
+								</figure>
+							</a>
+							<a href="/global-search" class="work-title" style="color: #333;">Assets Global Search (2023)</a>
 						</div>
 						<div class="work-cover-container">
 							<a href="/pm-assistant"> 
@@ -110,30 +113,25 @@ const anim = {
 							</a>
 							<a href="/pm-assistant" class="work-title" style="color: #333;">PowerMetrics Assistant (2023)</a>
 						</div>
-						 <div class="work-cover-container">
-							<a href="/global-search"> 
-								<figure style="" class="work-cover" transition:name="global-searach-hero">
-									<Image src={GlobalSearchHero} alt="GlobalSearchHero Explorer" />
-								</figure>
-							</a>
-							<a href="/global-search" class="work-title" style="color: #333;">Assets Global Search (2023)</a>
-						</div>
 					</div>
 				</section>
+				<!-- Other Work -->
 				<section style="position: relative; background: #e0e0e0; z-index: 20; align-items: center;justify-content: center;">
-					<div style="max-width: 800px; margin: auto;text-align: center;; margin-block-end: 4rem;">
-						<h2 style="color: #333;font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Other projects</h2>
-						<p style="color: #999;font-weight: 500;">Bridging the gap between marketing communication and product experience</p>
+					<div class="work-cover--title-container" style="position: sticky;top: 0;">
+						<div style="max-width: 800px; margin: auto;text-align: center;" class="project-headers">
+							<h2 style="color: #333;font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Other projects</h2>
+							<p style="color: #999;font-weight: 500;">Bridging the gap between marketing communication and product experience</p>
+						</div>
 					</div>
-					<div style="max-width: 1200px; margin: auto; padding: 0 2rem;">
-						<div class="other-work-grid">
+					<div class="work-cover--outer-container">
+						
 							<div class="work-cover-container">
 								<a href="/klipfolio-homepage-2024"> 
 									<figure class="work-cover" style="border-radius: 1rem;" transition:name="homepage-2024-hero" >
 										<Image src={Homepage2024Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
-								<a href="/klipfolio-homepage-2024" class="work-title" style="font-size: 1.75rem;color: #333;">Klipfolio Homepage (2024)</a>
+								<a href="/klipfolio-homepage-2024" class="work-title" style="">Klipfolio Homepage (2024)</a>
 							</div>
 							<div class="work-cover-container">
 								<a href="/klipfolio-homepage-2023"> 
@@ -141,17 +139,38 @@ const anim = {
 										<Image src={Homepage2023Hero} alt="Metric Explorer" />
 									</figure>
 								</a>
-								<a href="/klipfolio-homepage-2023" class="work-title" style="font-size: 1.75rem;color: #333;">Klipfolio Homepage (2023)</a>
+								<a href="/klipfolio-homepage-2023" class="work-title" style="">Klipfolio Homepage (2023)</a>
 							</div>
 							
 						
 						
-						</div>
+						
 					</div>
 				</section>
 			</div>
 
-			<Footer />
+			<div class="footer">
+				<div style="margin-bottom: 3rem;">
+					<h2 style="color: #fff;font-size: 2rem; font-weight: bold; margin-block-end: 1rem; ">Follow me</h2>
+				</div>
+				<div class="social-media" style="margin-bottom: 3rem;">
+					<a class="" href="https://twitter.com/ashrafgmk" rel="noopener noreferrer" target="_blank" title="Come follow me on Twitter!"><svg fill="white" class="w-5 h-5" viewBox="0 0 24 24" role="img">
+							<title>Twitter icon</title>
+							<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+						</svg></a>
+					<a class="" href="https://www.instagram.com/ak.pictures.jpg/" rel="noopener noreferrer" target="_blank" title="Come follow me on Instagram!"><svg fill="white" role="img" class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<title>Instagram icon</title>
+							<path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path>
+						</svg></a>
+					<a href="https://dribbble.com/Ashrafgk">
+						<svg fill="white" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" class="icon fill-current">
+							<rect width="32" height="32" fill="white" fill-opacity="0"></rect>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16703 0 0 7.16703 0 16C0 24.833 7.16703 32 16 32C24.8156 32 32 24.833 32 16C32 7.16703 24.8156 0 16 0ZM26.5683 7.37527C28.4772 9.70065 29.6226 12.6681 29.6573 15.8785C29.2061 15.7918 24.6941 14.872 20.1475 15.4447C20.0434 15.2191 19.9566 14.9761 19.8525 14.7332C19.5748 14.0738 19.2625 13.397 18.9501 12.7549C23.9826 10.7072 26.2733 7.75705 26.5683 7.37527ZM16 2.36009C19.4707 2.36009 22.6464 3.66161 25.0586 5.7961C24.8156 6.14317 22.7505 8.90239 17.8915 10.7245C15.6529 6.61171 13.1714 3.24512 12.7896 2.72451C13.8134 2.48156 14.8894 2.36009 16 2.36009ZM10.1866 3.64425C10.551 4.13015 12.9805 7.5141 15.2538 11.5401C8.86768 13.2408 3.22777 13.2061 2.62039 13.2061C3.50542 8.9718 6.36876 5.44902 10.1866 3.64425ZM2.32538 16.0174C2.32538 15.8785 2.32538 15.7397 2.32538 15.6009C2.9154 15.6182 9.54447 15.705 16.3644 13.6573C16.7636 14.4208 17.128 15.2017 17.4751 15.9826C17.3015 16.0347 17.1106 16.0868 16.9371 16.1388C9.89154 18.4121 6.14317 24.6247 5.8308 25.1453C3.6616 22.7332 2.32538 19.5228 2.32538 16.0174ZM16 29.6746C12.8416 29.6746 9.92625 28.5987 7.61822 26.7939C7.86117 26.2907 10.6377 20.9458 18.3427 18.256C18.3774 18.2386 18.3948 18.2386 18.4295 18.2213C20.3557 23.2017 21.1367 27.3839 21.3449 28.5813C19.6963 29.2928 17.8915 29.6746 16 29.6746ZM23.6182 27.3319C23.4794 26.4989 22.7505 22.5076 20.9631 17.5965C25.2495 16.9197 28.9978 18.0304 29.4664 18.1866C28.8764 21.987 26.6898 25.2668 23.6182 27.3319Z"></path>
+						</svg>
+					</a>
+				</div>
+				<div style="font-size: 1rem;">Ashraf Khattab © <span>2024</span></div>
+			</div>
 	
 			
 		</div>
@@ -163,6 +182,40 @@ const anim = {
         --x: 0;
         --y: 0;
     }
+	.case-studies-gallery {
+		margin-block-end: 100vh;
+	}
+	
+	.work-cover--title-container {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2rem;
+	}
+
+	.work-cover--outer-container {
+		max-width: 1200px;
+		margin: auto;
+		padding: 0 2rem;
+		background: linear-gradient(0deg, #e1e1e1 0%, #e1e1e1 97%, transparent 100%);
+		position: relative;
+		z-index: 100;
+	}
+
+	.project-headers > *{
+		/* Create View Timeline */
+		view-timeline-name: --revealing-text;
+		view-timeline-axis: block;
+
+		/* Attach animation, linked to the  View Timeline */
+		animation: linear text-reveal both;
+		animation-timeline: --revealing-text;
+
+		/* Tweak range when effect should run*/
+		animation-range: entry 45% cover 13%;
+	}
 
 	main {
 		background-color: #101010;
@@ -254,12 +307,18 @@ const anim = {
 	
 	
 	.work-cover-container {
-		margin-bottom: 10rem;
-		
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	
 
 	.work-cover {
+		width: 50vw;
+		max-width: 1200px;
+		min-width: 900px;
 		box-sizing: border-box;
 		background-size: cover; 
 		margin: 0rem auto 2rem;
@@ -296,7 +355,7 @@ const anim = {
 		gap: 0.4rem;
 		font-size: 2rem;
 		font-weight: bold;
-		margin-block-end: 2em;
+		color: #202020;
 	}
 
 	.works-tag {
@@ -305,15 +364,6 @@ const anim = {
 		padding: 0.5rem 1rem;
 		font-size: 12px;
 	}
-
-	
-
-	/* #progress {
-		transform-origin: 50% 50%;
-		animation: grow-progress forwards ease-in-out;
-		animation-timeline: scroll(block nearest);
-		animation-range: exit-crossing 0% exit-crossing 20%;
-	} */
 
 	@keyframes appear-progress {
 		from {
@@ -347,23 +397,102 @@ const anim = {
 		max-width: 100%;
 	}
 
-	.other-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-	@media only screen and (max-width: 1680px) {
-		#pattern-move-1 { display: none;}
-		#pattern-move-2 { display: none;}
+	.other-work-grid { 
+		display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; 
+		.work-cover, .work-cover-container {
+			width: auto;
+			max-width: none;
+			min-width: auto;
+		}
+	}
+	@media only screen and (max-width: 1280px) {
+		.work-cover {
+			width: auto;
+			max-width: none;
+			min-width: auto;
+		}
+		.work-cover--title-container { 
+			height: auto;
+			max-width: none;
+			min-width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 5rem;
+		}
+		.work-cover-container {
+			height: auto;
+			max-width: none;
+			min-width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding-bottom: 10rem;
+		}
 	}
 
 	@media only screen and (max-width: 992px) {
 		#pattern-move-1 { display: none;}
 		#pattern-move-2 { display: none;}
+		.work-cover--title-container { 
+			height: auto;
+			max-width: none;
+			min-width: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 5rem;
+		}
+		.work-cover-container {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding-bottom: 10rem;
+		}
 		.work-cover {
 			border-radius: 1rem; 
+			width: auto;
 		}
-		.works-tag {
-			display: none;
+		.work-title {
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: bold;
 		}
 
 		.other-work-grid { display: grid; grid-template-columns: 100%; gap: 1rem; }
+	}
+
+	.footer {
+		background-color: #101010;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 0;
+	}
+
+	.social-media {
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2rem;
+
+		a svg {
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 </style>
