@@ -71,7 +71,7 @@ const anim = {
 			<div class="case-studies-gallery" style="padding: 5rem 0 0; background: #e0e0e0; position: relative; z-index: 20;opacity: 1;" id="work">
 				<!-- Case Studies -->
 				<section style="position: relative; z-index: 20; align-items: center;justify-content: center;">
-					<div class="work-cover--title-container" style="position: sticky;top: 0;">
+					<div class="work-cover--title-container">
 						<div style="max-width: 800px; margin: auto;text-align: center;" class="project-headers">
 							<h2 style="color: #333; font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Case studies</h2>
 							<p style="color: #999;font-weight: 500;">Projects that have had impact</p>
@@ -117,7 +117,7 @@ const anim = {
 				</section>
 				<!-- Other Work -->
 				<section style="position: relative; background: #e0e0e0; z-index: 20; align-items: center;justify-content: center;">
-					<div class="work-cover--title-container" style="position: sticky;top: 0;">
+					<div class="work-cover--title-container">
 						<div style="max-width: 800px; margin: auto;text-align: center;" class="project-headers">
 							<h2 style="color: #333;font-size: 64px; font-weight: bold; margin-block-end: 1rem; ">Other projects</h2>
 							<p style="color: #999;font-weight: 500;">Bridging the gap between marketing communication and product experience</p>
@@ -190,6 +190,8 @@ const anim = {
 		align-items: center;
 		justify-content: center;
 		padding: 0 2rem;
+		position: sticky;
+		top: 0;
 	}
 
 	.work-cover--outer-container {
@@ -409,7 +411,7 @@ const anim = {
 			min-width: auto;
 		}
 		.work-cover--title-container { 
-			height: auto;
+			
 			max-width: none;
 			min-width: auto;
 			display: flex;
@@ -417,9 +419,10 @@ const anim = {
 			align-items: center;
 			justify-content: center;
 			margin-bottom: 5rem;
+			z-index: -1;
 		}
 		.work-cover-container {
-			height: auto;
+			
 			max-width: none;
 			min-width: auto;
 			display: flex;
@@ -449,7 +452,7 @@ const anim = {
 		#pattern-move-1 { display: none;}
 		#pattern-move-2 { display: none;}
 		.work-cover--title-container { 
-			height: auto;
+			
 			max-width: none;
 			min-width: auto;
 			display: flex;
@@ -457,6 +460,7 @@ const anim = {
 			align-items: center;
 			justify-content: center;
 			margin-bottom: 5rem;
+			z-index: -1;
 		}
 		.work-cover-container {
 			height: auto;
