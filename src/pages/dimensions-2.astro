@@ -20,11 +20,11 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 		<div style="position:relative; ">
         <section class="case-study--header">
             <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-                <h1 style="margin-bottom: 2rem;">Dimensions 2.0</h1>
+                <h1 style="margin-bottom: 2rem;" transition:name="dimensions-title">Dimensions 2.0</h1>
                 <p>Enhanced support for metric dimensions, with improved filtering and segmentation capabilities.</p>
             </div>
 			<div class="case-study--full-container" style="margin-bottom: 5rem;">
-                <figure class="work-cover" transition:name="dimnesions-hero">
+                <figure class="work-cover" transition:name="dimensions-hero">
                     <Image src={DimensionsHero} alt="PmAssistHero Explorer" style="border-radius: 2rem;"  />
                 </figure>
             </div>
@@ -299,8 +299,8 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 	.subheader-appear {
 		opacity: 0;
 		animation: subheader-animation linear forwards;
-		animation-duration: 2s;
-		animation-delay: 1.5s;
+		animation-duration: 1.25s;
+		animation-delay: 0.5s;
 	}
 
 	@keyframes subheader-animation {
