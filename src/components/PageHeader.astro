@@ -103,8 +103,9 @@
 
 				<div class="scroll-cta-container" style="">
 					<div class="scroll-cta">
-					Scroll
-					<div style="width: 1px;height: 30px;background: #555;content:'';display: block;margin-top: 4px;" data-astro-cid-wu5dj4rx=""></div> 
+						<a href="#About">About</a>
+						<a href="#Work">Work</a>
+						<a href="#Contact">Contact</a>
 					</div>
 				</div>
 			
@@ -143,14 +144,43 @@
 
 		animation: text-blur-progress forwards ease-in-out;
 		animation-timeline: scroll(block nearest);
-		animation-range: exit-crossing 0% exit-crossing 40%;
+		animation-range: exit-crossing 0% exit-crossing 40%; 
+		
+		a {
+			position: relative;
+			transition: 0.15s opacity;
+			font-weight: 600;
+			color: #eee;
+		}
+
+		a:hover:after  {
+			opacity: 1;
+			transition: 0.15s opacity 0.15s;
+		}
+
+		a::after {
+			opacity: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			content: "";
+			width: 20px;
+			height: 3px;
+			background-color: white;
+			text-align: center;
+			margin: 5px auto 0;
+			border-radius: 3px;
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
 	}
 	.scroll-cta {
-		display: flex;justify-content: center;flex-direction: column;align-items: center;
+		display: flex;justify-content: center;flex-direction: row;align-items: center; gap: 1rem;
 		opacity: 0;
-		animation: header-image-blinde-animation linear alternate 6;
+		animation: header-image-blinde-animation linear forwards;
 		animation-duration: 2.5s;
-		animation-delay: 14s;
+		animation-delay: 5s;
 	}
 	.header-image-container {
 		animation: header-image-blinde-animation linear forwards;

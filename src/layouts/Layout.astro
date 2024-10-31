@@ -60,9 +60,7 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	html {
-		/* scroll-behavior: smooth; */
-	}
+	
 	body {
 		margin: 0;
 	}
@@ -139,45 +137,12 @@ const { title } = Astro.props;
 			filter:blur(0px)
 		}
 	}
-	:root {
-		--bg: #0D0B22;
-		--bg-2: #150E2A;
-		--bg-3: #221745;
-		--bg--blue: #232a3a;
-		--text--offwhite: #EDECF9;
-		--text--headers: #6B47EB;
-		--main-cta: #6B47EB;
-	}
 
 	html {
 		font-family: "Inter", sans-serif;
 		font-optical-sizing: auto;
 		font-style: normal;
 		color: white;
-	}
-
-	html.lenis, html.lenis body {
-		height: auto;
-	}
-
-	.lenis.lenis-smooth {
-		scroll-behavior: auto !important;
-	}
-
-	.lenis.lenis-smooth [data-lenis-prevent] {
-		overscroll-behavior: contain;
-	}
-
-	.lenis.lenis-stopped {
-		overflow: hidden;
-	}
-
-	.lenis.lenis-smooth iframe {
-		pointer-events: none;
-	}
-
-	@view-transition {
-		navigation: auto;
 	}
 
 	.text-bold {
@@ -288,15 +253,10 @@ const { title } = Astro.props;
 				font-size: 14px;
 			}
 		}
-		--bg: hsl(0 0% 10%);
-		--header-height: 80px;
 		
 		
-		@supports (animation-timeline: scroll()) {
-			.table-header {
-				
-			}
-		}
+		
+		
 		
 		span.number {
 			position: absolute;
@@ -317,6 +277,17 @@ const { title } = Astro.props;
 
 	.case-study--header {
 		padding: 6rem 0;
+		img {
+			border-radius: 2rem;
+		}
+	}
+	@media only screen and (max-width: 992px) { 
+		.case-study--header {
+			padding: 6rem 0;
+			img {
+				border-radius: 1rem;
+			}
+	}
 	}
 
 	.case-study--body {
