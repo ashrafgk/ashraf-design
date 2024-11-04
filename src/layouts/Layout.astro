@@ -191,44 +191,47 @@ const { title } = Astro.props;
 
 	
 	main {
-		background: linear-gradient(#1e1e1e, #101010 20%);
+		background: linear-gradient(#e1e1e1, #f1f1f1 20%);
 	}
 
 	#case-study {
 		padding: 2rem 0;
-		
+		img {
+			border: 1px solid #ccc;
+		}
 		h1 {
 			font-size: clamp(2.625rem, 1.6429rem + 3.1429vw, 4rem);
 			font-weight: bold;
 			line-height: 125%;
-			color: #fff;
+			color: #333;
 		}
 
 		h2 {
 			font-size: 32px;
 			font-weight: bold;
 			line-height: 125%;
-			color: #fff;
+			color: #333;
 		}
 
 		h3 {
 			font-size: 28px;
 			font-weight: bold;
 			line-height: 125%;
-			color: #fff;
+			color: #333;
 		}
 
 		h4 {
 			font-size: 24px;
 			font-weight: bold;
 			line-height: 125%;
-			color: #fff;
+			color: #333;
 		}
 
 
 		p {
 			font-size: 20px;
 			line-height: 150%;
+			color: #555;
 		}
 		
 
@@ -239,7 +242,7 @@ const { title } = Astro.props;
 				font-size: 20px;
 				margin-bottom: 1rem;
 				line-height: 150%;
-				color: #ccc;
+				color: #555;
 			}
 
 		}
@@ -251,6 +254,7 @@ const { title } = Astro.props;
 		.table {
 			p {
 				font-size: 14px;
+				color: #555;
 			}
 		}
 		
@@ -264,7 +268,7 @@ const { title } = Astro.props;
 			font-size: 6rem;
 			left: -24px;
 			top: -50px;
-			background: -webkit-linear-gradient(#555 0%, transparent 80%);
+			background: -webkit-linear-gradient(#cbcbcb 0%, transparent 80%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			display: flex;
@@ -295,7 +299,7 @@ const { title } = Astro.props;
 		flex-direction: column;
 		gap: 3rem;
 		margin: auto;
-		color: #ccc;
+		color: #555;
 		justify-content: center;
 		img {
 			margin: 0rem auto 1rem;
@@ -312,6 +316,9 @@ const { title } = Astro.props;
 
 			/* Tweak range when effect should run*/
 			animation-range: entry 25% cover 40%;
+			
+			
+		
 		}
 		img.vertical-reveal {
 			margin: 0rem auto 1rem;
@@ -373,6 +380,7 @@ const { title } = Astro.props;
 		img:has(+ figcaption) {
 			margin-bottom: 0.5rem;
 		}
+		
 
 		figcaption {
 			text-align: center;
@@ -382,13 +390,14 @@ const { title } = Astro.props;
 	}
 
 	.video-container {
-		padding: 3rem;
+		padding: 6rem 3rem;
     	background: #cbcbcb;
 		border-radius: 2rem;
 		overflow: hidden;
 		margin-bottom: 1rem;
 		background-color: #e2e2e2;
 		box-sizing: border-box;
+		border: 1px solid #ccc;
 		video {
 			box-shadow: 0px 128px 64px 0px rgba(0, 0, 0, 0.16), 0px 16px 16px 0px rgba(0, 0, 0, 0.16), 0px 96px 96px 0px rgba(0, 0, 0, 0.16), 0px 36px 36px 0px rgba(0, 0, 0, 0.16);
 			width: 1200px; 
@@ -396,11 +405,12 @@ const { title } = Astro.props;
 			margin: auto; 
 			border-radius: 1rem; 
 			overflow: hidden;
+			display: block;
 		}
 	}
 
 	.figure.video {
-		
+		border: 1px solid #ccc;
 	}
 
 	.table {
@@ -425,7 +435,7 @@ const { title } = Astro.props;
 		row-gap: 1rem;
 		padding: 1.5rem 0 0rem;
 		top: 0;
-		background: #101010;
+		background: #f1f1f1;
 		border-bottom: 2px solid #555;
 	}
 
