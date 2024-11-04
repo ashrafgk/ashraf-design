@@ -31,6 +31,7 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
                     <p style="font-size: 1rem; color: #aaa; margin-top: 2rem;">Want to learn more about this project? <a href="mailto:ashraf.gmk@gmail.com?subject=I%20am%20coming%20from%20your%20portfolio" style="font-weight: bold; color: #aaa">Reach out to me</a> for a detailed presentation on how this project evolved, including insights into the design process, drafts, decision-making, and brainstorming stages.</p>
                 </div>
             </div>
+            <div style="display: block;position: fixed;width: 100%;bottom: 0;background: linear-gradient(0deg, #f1f1f1, transparent);height: 100px;z-index: 1;"></div>
            
         </section>
         <section class="case-study--body" style="">
@@ -59,6 +60,31 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
                 <div class="case-study--background-info-container">
                     <div>
                         <p>PowerMetrics provided users the ability to filter and segment data by metric dimensions, but our customer feedback highlighted a demand for expanded control over these dimensions. There is a clear need for additional functionalities to better serve both end users and business stakeholders by delivering highly relevant metrics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study--large-container" style="margin-bottom: 3rem; background-color: #202020; padding: 3rem 0; border-radius: 2rem; position: relative; z-index: 100;">
+                <div class="quote-container" style="">
+                    <div>
+                        <p style="color: #999;font-weight: bold; font-size: 3.5rem; line-height: 0.5; margin: 0">"</p>
+                        <p style="color: #999;">The current filtering mechanism, by selecting members, feels really restrictive. I need more flexibility.</p>
+                        <p style="color: #999; font-size: 0.8rem; font-weight: bold;">Customer - Technical User</p>
+                    </div>
+                    <div>
+                        <p style="color: #999;font-weight:999 bold; font-size: 3.5rem; line-height: 0.5; margin: 0">"</p>
+                        <p style="color: #999;">I need to configure metrics in a way that reduces confusion for my users. I need more control over the filters and segments they can access.</p>
+                        <p style="color: #999; font-size: 0.8rem; font-weight: bold;">Partner - Technical User</p>
+                    </div>
+                    <div>
+                        <p style="color: #999;font-weight: bold; font-size: 3.5rem; line-height: 0.5; margin: 0">"</p>
+                        <p style="color: #999;">I need to filter by both numerical and text columns, but that’s not an option right now.</p>
+                        <p style="color: #999; font-size: 0.8rem; font-weight: bold;">Customer - Business User</p>
+                    </div>
+                    <div>
+                        <p style="color: #999;font-weight: bold; font-size: 3.5rem; line-height: 0.5; margin: 0">"</p>
+                        <p style="color: #999;">For some of my customers’ metrics, I need default filters that can be adjusted but always reset to the original settings.</p>
+                        <p style="color: #999; font-size: 0.8rem; font-weight: bold;">Partner - Technical User</p>
                     </div>
                 </div>
             </div>
@@ -316,5 +342,15 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
 			opacity: 1;
 			transform: translateY(0px)
 		}
+	}
+    .quote-container {
+		display: grid; 
+		/* grid-template-columns: 1fr 1fr;  */
+		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+		width: 1000px; 
+		margin: auto; 
+		max-width: fit-content;
+		gap: 4rem 1.5rem;
+		padding: 2rem;
 	}
 </style>
