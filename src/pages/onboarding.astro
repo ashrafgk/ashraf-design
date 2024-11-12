@@ -1,0 +1,294 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PorjectsFooter from '../components/ProjectsFooter.astro';
+
+import { Image } from 'astro:assets';
+import OnboardingrHero from '../assets/work-onboarding--cover.png';
+---
+
+<Layout title="Ashraf Khattab Portfolio | Onboarding">
+	
+	<main id="case-study">
+		<Nav />
+		<div style="position:relative; ">
+			<section class="case-study--header">
+				<div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+					<h1 style="margin-bottom: 2rem;" transition:name="onboarding-title">Onboarding</h1>
+					<p class="subheader-appear">A new onboarding experience to create a tailored, persona-driven flow that accelerates Time-to-Value for new users by prioritizing an inviting and visually appealing design.</p>
+				</div>
+				<div class="case-study--full-container" style="margin-bottom: 5rem; text-align: center">
+					<figure class="work-cover" transition:name="onboarding-hero">
+						<Image src={OnboardingrHero} alt="Onboarding" />
+					</figure>
+					
+				</div>
+				<div style="display: block;position: fixed;width: 100%;bottom: 0;background: linear-gradient(0deg, #f1f1f1, transparent);height: 100px;z-index: 1;"></div>
+			
+			</section>
+			
+			<section class="case-study--body" style="">
+				
+				
+				<div class="case-study--background">
+					<h2>Project Info</h2>
+					<div class="case-study--background-info-container">
+						<div class="case-study--background-info">
+							<div>
+								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Name</div>
+								<p>Onboarding</p>
+							</div>
+							<div>
+								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Role</div>
+								<p>Project Lead</p>
+								<p>UX/UI Designer</p>
+							</div>
+							<div>
+								<div style="color: #555;; font-weight: bold; margin-bottom: 0.5rem;">Year</div>
+								<p>2022</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="case-study--background">
+					<h2>Introduction</h2>
+					<div class="case-study--background-info-container">
+						<div>
+							<p>Klipfolio PowerMetrics offers distinct pathways for users with different roles: builder, consumer, or a hybrid of both. Each user type has unique needs and goals, which stem from their specific job-to-be-done. During the early product experience—particularly in onboarding—it’s crucial to quickly identify which user type is starting an account. Understanding this provides tailored guidance, enabling users to immediately grasp the product’s core value, making them more likely to stay engaged. Optimizing this first impression is vital for improving user retention, reducing support costs, and ultimately driving revenue.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="case-study--large-container" style="margin-bottom: 3rem; background-color: #202020; padding: 5rem; border-radius: 2rem; position: relative; z-index: 100;">
+					
+						
+						<div style="max-width: 600px; margin: auto;">
+							<p style="color: #999;">Our primary objective was to minimize the user's <span style="font-weight: bold;">Time-to-Value (TTV)</span>, aiming to provide value as quickly as possible. To do this effectively, we first needed a clear understanding of who our users are and a strategy for swiftly identifying them. By connecting users with relevant product pathways based on their role, we could accelerate their journey to success.</p>
+						</div>
+					
+				</div>
+				
+				
+				<div class="case-study--background">
+					<h2>Proposed solution</h2>
+					<div class="case-study--background-info-container">
+						<div>
+							<p> To improve the onboarding experience, we redesigned the signup flow from the ground up, prioritizing an inviting and visually appealing design that makes users feel welcome and engaged from the first interaction. The new flow was streamlined into three intuitive steps</p>
+							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
+								<li>1. Account setup</li>
+								<li>2. Profile setup</li>
+								<li>3. Persona (role) selection</li>
+							</ul>
+							<p>Each step was thoughtfully designed to be simple and approachable, maintaining a smooth flow that minimized cognitive load while maximizing user engagement. This revamped onboarding path ensured that users felt supported and understood right from the start, setting them up for success within the product.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-study--full-container" style="margin-bottom: 3rem;">
+					<figure class="content video-container">
+						<video class="explorer-video" webkit-playsinline autoplay muted loop playsinline preload="auto" style="object-fit: none;object-position: -2px -2px;" src="../img/sign-up-flow.mp4#t=0.5">
+							<source src="../img/sign-up-flow.mp4#t=0.5" type="video/mp4">
+						</video> 
+					</figure> 
+				</div> 
+
+				
+				<div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+
+				<div class="case-study--text-container">
+					<div>
+						<div style="margin-bottom: 1rem; position: relative;"><span class="number">1</span><h3 style="position: relative;">Account page</h3></div>
+						<p>Account Setup: A straightforward initial step focused on basic account creation, keeping the process clean and quick to avoid friction.</p>
+					</div>
+				</div>
+				<div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
+					<div class="scrollsnap">
+						<div class="item-container">
+							<figure><img src="../img/work-onboarding--account.png" class="lazyload"></figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-study--text-container">
+					<div>
+						<div style="margin-bottom: 1rem; position: relative;"><span class="number">2</span><h3 style="position: relative;">Profile page</h3></div>
+						<p> In the profile setup step, users were guided through entering essential information to establish a personalized experience from the outset. To reinforce the impact of their input on the app's customization, we incorporated animation that zoomed in and highlighted specific UI elements as users filled in their details. This visual feedback created an immediate connection between their profile setup and the personalized interface they would experience within the app, underscoring the value of each field they completed.</p>
+						<p>The animations added an engaging, interactive layer, showing users in real time how their information would shape their journey. This approach not only enhanced the onboarding experience but also fostered a stronger sense of ownership and familiarity with the product right from the start.</p>
+					</div>
+				</div>
+				<div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
+					<div class="scrollsnap">
+						<div class="item-container">
+							<figure><img src="../img/work-onboarding--profile-1.png" class="lazyload"></figure>
+							<figure><img src="../img/work-onboarding--profile-2.png" class="lazyload"></figure>
+							<figure><img src="../img/work-onboarding--profile-3.png" class="lazyload"></figure>
+						</div>
+					</div>
+				</div>
+
+				<div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+
+				<div class="case-study--text-container">
+					<div>
+						<div style="margin-bottom: 1rem; position: relative;"><span class="number">3</span><h3 style="position: relative;">Persona page</h3></div>
+						<p>In the final step of onboarding, users were invited to identify their primary role within Klipfolio PowerMetrics, whether as a builder (Dashboard Builder), consumer (Decision Makers), or hybrid (Both). This self-identification step was crafted to feel intuitive and meaningful, helping users quickly find the path most relevant to them.</p>
+						<p>Each role was represented through a curated set of clear keywords, actions, and visuals that conveyed its unique characteristics and value. These elements weren’t arbitrarily chosen; they were based on deep research into each persona. By examining the specific tools and services each role typically interacts with, alongside the product features they would find most useful, we crafted a tailored experience that spoke directly to each type of user.</p>
+						<p>This research-informed approach ensured that users not only saw options they could easily relate to but also felt confident that their selection would lead them to features they truly needed. By connecting users with a personalized product experience from the very beginning, we were able to improve engagement, streamline their learning curve, and ultimately boost satisfaction and retention.
+						</p>
+					</div>
+				</div>
+				<div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
+					<div class="scrollsnap">
+						<div class="item-container">
+							<figure><img src="../img/work-onboarding--persona-1.png" class="lazyload"></figure>
+							<figure><img src="../img/work-onboarding--persona-2.png" class="lazyload"></figure>
+							<figure><img src="../img/work-onboarding--persona-3.png" class="lazyload"></figure>
+						</div>
+					</div>
+				</div>
+
+				<div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+
+				<div class="case-study--background">
+					<h2>Putting the personas to work</h2>
+					<div class="case-study--background-info-container">
+						<div>
+							<p>After users selected their persona, Klipfolio PowerMetrics adapted by presenting tailored assets to match each role’s needs, accelerating their journey to value:</p>
+							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
+								<li>Starting Guides: Role-specific guides introduced each persona to relevant features, helping users understand the essentials quickly.</li>
+								<li>Workflow-Specific Onboarding: Onboarding pathways aligned with each persona’s natural workflows, guiding them through experiences suited to their role—builders with metric setup, consumers with data visualization, and hybrids with a balanced approach.</li>
+								<li>Sample Metrics and Dashboards: Users received curated sample metrics and dashboards relevant to their goals, offering practical examples and inspiration.</li>
+							</ul>
+							<p>This persona-driven approach shortened Time-to-Value, boosted engagement, and provided users with the right tools to see immediate benefits from the product.</p>
+						</div>
+					</div>
+				</div>
+
+				<div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+				
+				<div class="case-study--background">
+					<h2>Key business outcomes</h2>
+					<div class="case-study--background-info-container">
+						<div>
+							<ul style="margin-top: 1rem; list-style: none; margin-left: 0">
+								<li>The new onboarding flow led to a 45% improvement in the overall signup funnel compared to the previous version</li>
+								<li>An overall increase in key activities by each persona, such as Custom Metrics created by Builders (Dashboard Builders), or Instant Metrics added by Consumers (Decision Makers)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+			</section>
+			<PorjectsFooter />
+			<Footer />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.grid-container {
+		container-type: inline-size;
+		container-name: grid-container;
+		display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap:2rem;
+	}
+
+	@container (max-width: 1080px) {
+		.grid-container {
+			grid-template-columns: auto;
+		}
+	}
+	.quote-container {
+		display: grid; 
+		/* grid-template-columns: 1fr 1fr;  */
+		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+		width: 1000px; 
+		margin: auto; 
+		max-width: fit-content;
+		gap: 4rem 1.5rem;
+		padding: 2rem;
+	}
+	.scrollsnap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+		display: flex;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		gap: 2rem;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+		.item-container {
+			margin: 0 auto;
+			display: grid;
+			grid-gap: 20px;
+			grid-auto-flow: column;
+			width: -moz-fit-content;
+			width: fit-content;
+			padding: 0 5vw;
+			
+			list-style-type: none;
+		}
+		figure {
+			display: flex;
+			width: min(max(75.5vw - 0px,280px),1580px);
+			scroll-snap-align: center;
+    		list-style-type: none;
+			max-width: none;
+		}
+	}
+
+	@media only screen and (max-width: 992px) { 
+		.scrollsnap { .item-container { padding: 0 calc(5vw - 2rem); } }
+	}
+
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.header-appear {
+		opacity: 0;
+		animation: header-animation linear forwards;
+		animation-duration: 2s;
+		animation-delay: 1s;
+	}
+
+	@keyframes header-animation {
+		from {
+			opacity: 0;
+			transform: translateY(-10px)
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0px)
+		}
+	}
+
+	.subheader-appear {
+		opacity: 0;
+		animation: subheader-animation linear forwards;
+		animation-duration: 1.25s;
+		animation-delay: 0.5s;
+	}
+
+	@keyframes subheader-animation {
+		from {
+			opacity: 0;
+			transform: translateY(-10px)
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0px)
+		}
+	}
+</style>

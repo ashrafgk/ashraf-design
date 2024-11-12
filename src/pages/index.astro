@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PageHeader from '../components/PageHeader.astro';
 import { Image } from 'astro:assets';
+import PageHeader from '../components/PageHeader.astro';
 import ExplorerHero from '../assets/work-explorer--cover.png';
 import DimensionsHero from '../assets/work-dimensions-2--cover.png';
 import PmAssistHero from '../assets/work-pm-assistant--cover.png';
 import GlobalSearchHero from '../assets/work-global-search--cover.png';
 import Homepage2024Hero from '../assets/klipfolio-homepage-2024-cover.png';
 import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
+import OnboardingrHero from '../assets/work-onboarding--cover.png';
 
 const anim = {
 	old: {
@@ -107,6 +108,15 @@ const anim = {
 								</figure>
 							</a>
 							<a href="/pm-assistant" class="work-title" transition:name="pm-assistant-title">PowerMetrics Assistant (2023)</a>
+						</div>
+						
+						<div class="work-cover-container">
+							<a href="/onboarding"> 
+								<figure class="work-cover" transition:name="onboarding-hero" >
+									<Image src={OnboardingrHero} alt="Onboarding" />
+								</figure>
+							</a>
+							<a href="/onboarding" class="work-title" transition:name="onboarding-title">Onboarding (2022)</a>
 						</div>
 					</div>
 				</div>
