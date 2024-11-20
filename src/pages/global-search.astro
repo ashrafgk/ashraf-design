@@ -53,26 +53,37 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
                 </div>
             </div>
             <div class="case-study--background">
-                <h2>Background</h2>
+                <h2>The problem:</h2>
                 <div class="case-study--background-info-container">
                     <div>
-                        <p>Users are requesting the ability to search for assets regardless of where they are in the app. More specifically a hub that hosts all their assets from data feeds, metrics, to dashboards. Additionally it can serve as a way to navigate to other pages of the app a lot easier.</p>
+                        <p>Navigating PowerMetrics efficiently was a challenge for users, especially as their accounts grew more complex with multiple assets such as Account Tokens, Data Feeds, Metrics, and Dashboards. Key issues included:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>Discoverability: Important sections of the app were often hidden or buried under menus, leading to frustration and time loss.</li>
+                            <li>Inefficiency: Users had to navigate multiple clicks or recall exact locations to access or manage their assets.</li>
+                            <li> Lack of Contextual Actions: Performing specific actions often required users to navigate away from their current location, disrupting their workflow.</li>
+                           
+                        </ul>
+                        <p>These challenges hampered user productivity, reduced satisfaction, and created barriers for new users trying to familiarize themselves with the app’s capabilities.</p>
                     </div>
                 </div>
             </div>
             <div class="case-study--background">
-                <h2>Requirements</h2>
+                <h2>Proposed Solution:</h2>
                 <div class="case-study--background-info-container">
+                    
                     <div>
-                        <p>To build a useful simple yet powerful global search feature it should include:</p>
-                        <ul style="margin-top: 1rem; list-style: none; margin-left: 0">
-                            <li>The ability to search all assets types.</li>
-                            <li>Extensible design for future additions suchs as service tokens and quick actions.</li>
-                            <li>Ability to preview the results</li>
+                        <p>To address these challenges, we introduced Global Search, a centralized, universal search hub that provides users with:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>Instant Search Activation: Allowing users to launch search from anywhere in the app using a single keystroke or click.</li>
+                            <li>Comprehensive Search Results: A unified view of all PowerMetrics assets, including Account Profiles, Data Feeds, Metrics, and Dashboards, with filters and categories for ease of navigation.</li>
+                            <li>Quick Actions: Context-sensitive shortcuts that enable users to perform actions without leaving their current location. For example, in the Metric Library, users can directly create, edit, or delete metrics.</li>
+                            <li>Guided Discovery: Highlighting important but less visible sections of the app, acting as a wayfinding tool for users to uncover underutilized features.</li>
                         </ul>
+                        <p>This solution would not only streamline navigation but also improve productivity by aligning with user workflows and providing actionable insights.</p>
                     </div>
                 </div>
             </div>
+           
 
             <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure class="content video-container">
@@ -82,32 +93,68 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
                 </figure> 
             </div> 
 
+            <div class="case-study--text-container">
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Key Features:</h2>
+               
+                    <div>
+                        <p>To address these challenges, we introduced Global Search, a centralized, universal search hub that provides users with:</p>
+                        <p style="font-weight: bold;">Universal Search Hub:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>A centralized search bar accessible from anywhere in the app.</li>
+                            <li>Displays relevant results categorized by asset type (e.g., Dashboards, Metrics, Data Feeds).</li>
+                        </ul>
+                            
+                        <p style="font-weight: bold;">Quick Actions:</p>
+                        <ul style="margin-top: 1rem;  ">
+                            <li>Actionable shortcuts based on the user’s context, e.g., editing a metric, adding a new dashboard, or updating a data feed directly from the search results.</li>
+                            <li>Adaptive options that change dynamically based on the section of the app the user is in.</li>
+                        </ul>
+                        <p style="font-weight: bold;">Discoverability Enhancement:</p>
+                        <ul style="margin-top: 1rem;  ">
+                            <li>Highlights hidden or underutilized important sections, such as account settings, ensuring users are aware of all available features.</li>
+                        </ul>
+                        <p style="font-weight: bold;">Smart Filters and Navigation:</p>
+                        <ul style="margin-top: 1rem;  ">
+                            <li>Allows users to refine search results by asset type, owner, or dimension.</li>
+                            <li>Enables quick jumps to specific assets or sections with minimal clicks.</li>
+                            
+                        </ul>
+                        <p style="font-weight: bold;">Advanced search:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>Supports advanced search features, including the use of modifiers (e.g., type, dimension, owner) and logical operators such as OR/AND, allowing users to filter results with greater precision.</li>
+                        </ul>
+                        
+                        <p style="font-weight: bold;">Keyboard-First Interaction:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>Supports keyboard shortcuts for opening the search, navigating results, and executing Quick Actions, catering to power users.</li>
+                        </ul>
+                        <p style="font-weight: bold;">Scalable Architecture:</p>
+                        <ul style="margin-top: 1rem; ">
+                            <li>Designed to accommodate future additions like user-specific recommendations or AI-driven insights into commonly searched terms and actions.</li>
+                        </ul>
+                        <p>This solution would not only streamline navigation but also improve productivity by aligning with user workflows and providing actionable insights.</p>
+                    </div>
+               
+            </div>
+
             
             <div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
 
             <div class="case-study--text-container">
-                <h2 style="margin-bottom: 1rem; line-height: 150%;">Various state</h2>
-                <p>Showing the various states included in the global search mechanism suchs as the zero state, the no results found state, and the searching state.</p>
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Zero state</h2>
+                <p>The zero state highlights Quick Actions relevant to the user’s current section and serves as a navigation hub to other key areas of the app.</p>
             </div>
 
-            <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-                    <img src="../img/work-global-search--zero-state.png" class="lazyload">
-                </figure>
+            <div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
+                <div class="scrollsnap">
+                    <div class="item-container">
+                        <figure><img src="../img/work-global-search--zero-state.webp" class="lazyload"></figure>
+                        <figure><img src="../img/work-global-search--zero-state-2.webp" class="lazyload"></figure>
+                    </div>
+                </div>
             </div>
-            <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-                    <img src="../img/work-global-search--no-results.png" class="lazyload">
-                </figure>
-            </div>
-            
-            <div class="case-study--large-container" style="margin-bottom: 5rem; text-align: center">
-                <figure class="content video-container" style="padding: 0;">
-                    <video class="explorer-video" webkit-playsinline autoplay muted loop playsinline preload="auto" preload="auto" style="width: auto;" src="../img/work-global-search--searching.mp4#t=0.5">
-                        <source src="../img/work-global-search--searching.mp4#t=0.5" type="video/mp4">
-                    </video> 
-                </figure>
-            </div>
+
+           
 
             <div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
 
@@ -117,26 +164,15 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
             </div>
         
 
-            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+            <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-global-search--search-state.png" class="lazyload">
+                    <img src="../img/work-global-search--search-state.webp" class="lazyload">
                 </figure>
             </div>
 
             <div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
 
-            <div class="case-study--text-container">
-                <h2 style="margin-bottom: 1rem; line-height: 150%;">Filter on a category</h2>
-                <p>You have the flexibility to show or hide any category from appearing in search results, making it easier to customize your experience and find what you need.</p>
-            </div>
-
-            <div class="case-study--large-container" style="margin-bottom: 3rem;">
-                <figure>
-                    <img src="../img/work-global-search--categories.png" class="lazyload">
-                </figure>
-            </div>
-
-            <div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+           
 
             <div class="case-study--text-container">
                 <h2 style="margin-bottom: 1rem; line-height: 150%;">Specific result preview</h2>
@@ -144,9 +180,55 @@ import Homepage2023Hero from '../assets/klipfolio-homepage-2023-cover.png';
             </div>
 
 
-            <div class="case-study--large-container" style="margin-bottom: 3rem;">
+            <div class="case-study--full-container" style="margin-bottom: 3rem;">
                 <figure>
-                    <img src="../img/work-global-search--result-preview.png" class="lazyload">
+                    <img src="../img/work-global-search--result-preview.webp" class="lazyload">
+                </figure>
+            </div>
+
+            <div class="case-study--text-container">
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Advanced Searching with Modifiers and Operators</h2>
+                <p>Empower users with precise control over their searches using special modifiers like Asset Type (Type) and Dimensions. Enhance search flexibility further by enabling the use of logical operators such as AND/OR to combine and refine search criteria.</p>
+            </div>
+
+            <div class="case-study--full-container scrollsnap-container" style="margin-bottom: 3rem; position: relative;">
+                <div class="scrollsnap">
+                    <div class="item-container">
+                        <figure><img src="../img/work-global-search--modifier-1.webp" class="lazyload"></figure>
+                        <figure><img src="../img/work-global-search--modifier-2.webp" class="lazyload"></figure>
+                        <figure><img src="../img/work-global-search--modifier-3.webp" class="lazyload"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study--text-container">
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Filter on a category</h2>
+                <p>You have the flexibility to show or hide any category from appearing in search results, making it easier to customize your experience and find what you need.</p>
+            </div>
+
+            <div class="case-study--full-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-global-search--categories.webp" class="lazyload">
+                </figure>
+            </div>
+
+            <div style="height: 3px; width: 300px; background: #ddd; position: relative; margin: 5rem auto;"></div>
+
+            <div class="case-study--text-container">
+                <h2 style="margin-bottom: 1rem; line-height: 150%;">Various States</h2>
+                <p>Showing the various states included in the global search mechanism suchs as the no results found state and syncing assets state.</p>
+            </div>
+
+           
+            <div class="case-study--full-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-global-search--no-results.webp" class="lazyload">
+                </figure>
+            </div>
+           
+            <div class="case-study--full-container" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="../img/work-global-search--syncing.webp" class="lazyload">
                 </figure>
             </div>
 
